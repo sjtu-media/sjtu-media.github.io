@@ -1,15 +1,16 @@
 # site properties and page defaults
 title: SJTU MedIA
-subtitle: Research Group Website
+mobile-title: MedIA
+subtitle: Medical Image Analysis Lab
 description: Medical image analysis, computational imaging, and AI for healthcare at Shanghai Jiao Tong University.
 header:
 footer:
 proofer: false
-repository: dengyushan/sjtu-media.github.io
+repository: sjtu-media/sjtu-media.github.io
 
 # site social media and other links
 links:
-  github: dengyushan
+  github: sjtu-media
 
 ### jekyll settings
 

@@ -5,6 +5,10 @@
 {% assign png = "images/logo.png" | file_exists %}
 {% assign jpg = "images/logo.jpg" | file_exists %}
 {% assign logo = svg | default: png | default: jpg | default: nil %}
+{% assign short_svg = "images/logo-short.svg" | file_exists %}
+{% assign short_png = "images/logo-short.png" | file_exists %}
+{% assign short_jpg = "images/logo-short.jpg" | file_exists %}
+{% assign short_logo = short_svg | default: short_png | default: short_jpg | default: nil %}
 
 <header
   class="background"
@@ -18,7 +22,7 @@
 >
   <a href="{{ "/" | relative_url }}" class="home">
     {% if logo %}
-      <span class="logo">
+      <span class="logo logo-full">
         {% if svg %}
           {{ svg | file_read }}
         {% else %}
@@ -26,10 +30,22 @@
         {% endif %}
       </span>
     {% endif %}
+    {% if short_logo %}
+      <span class="logo logo-short">
+        {% if short_svg %}
+          {{ short_svg | file_read }}
+        {% else %}
+          <img src="{{ short_logo | relative_url | uri_escape }}" alt="mobile logo">
+        {% endif %}
+      </span>
+    {% endif %}
     {% if site.logo-text != false %}
       <span class="title-text" data-tooltip="Home">
         {% if site.title and site.show-title != false %}
-          <span class="title">{{ site.title }}</span>
+          <span class="title title-desktop">{{ site.title }}</span>
+        {% endif %}
+        {% if site.mobile-title %}
+          <span class="title title-mobile">{{ site.mobile-title }}</span>
         {% endif %}
         {% if site.subtitle and site.show-subtitle != false %}
           <span class="subtitle">{{ site.subtitle }}</span>

@@ -4,7 +4,8 @@
 $logo-big: 80px;
 $logo: 40px;
 $big-padding: 100px;
-$collapse: 700px;
+$compact: 1180px;
+$collapse: 960px;
 $sticky: true;
 
 header {
@@ -43,10 +44,15 @@ header a {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
+  min-width: 0;
 }
 
 .logo {
   height: 44px;
+}
+
+.logo-short {
+  display: none;
 }
 
 .logo > * {
@@ -57,12 +63,18 @@ header a {
 .title-text {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   gap: 2px;
   min-width: 0;
   font-family: var(--heading);
-  text-align: left;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  max-width: min(42vw, 520px);
 }
 
 .title {
@@ -71,6 +83,10 @@ header a {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.title-mobile {
+  display: none;
 }
 
 .subtitle {
@@ -116,6 +132,8 @@ nav {
   font-size: 0.96rem;
   font-weight: var(--semi-bold);
   text-transform: none;
+  position: relative;
+  z-index: 1;
 }
 
 nav > a {
@@ -150,8 +168,90 @@ header .dark-toggle:hover {
 }
 
 header:not([data-big]) {
+  @media (max-width: $compact) {
+    gap: 16px;
+    padding: 14px 20px;
+
+    .home {
+      gap: 10px;
+      flex-basis: auto;
+      flex-grow: 0;
+      max-width: none;
+    }
+
+    .logo-full {
+      display: none;
+    }
+
+    .logo-short {
+      display: inline-flex;
+      height: 42px;
+      flex-shrink: 0;
+    }
+
+    .title-text {
+      gap: 0;
+      position: static;
+      transform: none;
+      width: auto;
+      max-width: none;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .title-desktop,
+    .subtitle {
+      display: none;
+    }
+
+    .title-mobile {
+      display: block;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      text-transform: none;
+      line-height: 1.1;
+    }
+
+    nav {
+      gap: 14px;
+      font-size: 0.88rem;
+    }
+
+    nav > a {
+      padding: 6px 0;
+    }
+
+    .dark-toggle {
+      width: 36px;
+      height: 22px;
+      margin-left: 2px;
+    }
+  }
+
   @media (max-width: $collapse) {
     justify-content: flex-end;
+    padding: 14px 18px;
+
+    .home {
+      gap: 10px;
+      min-width: 0;
+      flex-basis: auto;
+      flex-grow: 1;
+      max-width: calc(100% - 56px);
+    }
+
+    .title-text {
+      position: static;
+      transform: none;
+      width: auto;
+      max-width: none;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .title-mobile {
+      font-size: 1.05rem;
+    }
 
     .nav-toggle {
       display: flex;
@@ -166,6 +266,8 @@ header:not([data-big]) {
       flex-direction: column;
       width: 100%;
       padding-top: 8px;
+      gap: 12px;
+      font-size: 0.96rem;
     }
 
     .dark-toggle {
@@ -199,6 +301,10 @@ header[data-big] {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: static;
+    transform: none;
+    width: auto;
+    max-width: none;
   }
 
   .title {
