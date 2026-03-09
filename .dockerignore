@@ -1,0 +1,8 @@
+.git
+.bundle
+.docker-jekyll-cache
+.docker-sass-cache
+.docker-site
+.jekyll-cache
+.sass-cache
+_site

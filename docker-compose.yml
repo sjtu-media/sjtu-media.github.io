@@ -1,0 +1,19 @@
+services:
+  jekyll:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /srv/jekyll
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    volumes:
+      - .:/srv/jekyll:ro
+    command: >
+      bash -lc
+      "bundle exec jekyll serve
+      --host 0.0.0.0
+      --port 4000
+      --destination /tmp/jekyll-site
+      --livereload
+      --force_polling"
