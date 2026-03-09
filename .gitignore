@@ -9,6 +9,7 @@ vendor
 .docker-site
 debug.log
 __pycache__
+_cite/.cache/
 .DS_STORE
 .env*
 package.json
