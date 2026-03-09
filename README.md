@@ -1,13 +1,13 @@
-# sjtu-media.github.io
+# SJTU MedIA
 
-GitHub Pages-compatible Jekyll site with local preview via Docker Compose.
+This repository now uses the Greene Lab website template as the base for a full lab website, with local preview via Docker Compose.
 
-## Prerequisites
+## Upstream Template
 
-- Docker
-- Docker Compose v2
+- Template repo: `greenelab/lab-website-template`
+- Documentation: <https://greene-lab.gitbook.io/lab-website-template-docs>
 
-## Local preview
+## Local Preview
 
 Start the site:
 
@@ -15,7 +15,7 @@ Start the site:
 docker compose up
 ```
 
-Then open `http://localhost:4000`.
+Open <http://localhost:4000>.
 
 Stop the site:
 
@@ -25,7 +25,19 @@ docker compose down
 
 Notes:
 
-- The first startup may take longer because Docker needs to build the image and pull the required gems.
-- The source directory is mounted read-only, so this setup does not depend on matching host UID/GID values.
-- File changes are watched from the mounted repository, so page edits should rebuild automatically.
-- LiveReload is enabled for local preview.
+- The container builds the template's Ruby + Python environment and runs both Jekyll preview and citation generation.
+- Source files are mounted read-write because the citation workflow updates files in `_data/`.
+- The entrypoint drops privileges to the owner of the mounted repo on Linux, so different users can start the site without hard-coded UID/GID settings.
+
+## Content Structure
+
+- `_members/` stores member profile pages.
+- `_data/` stores projects, citations, and data sources.
+- `research/`, `projects/`, `team/`, `blog/`, and `contact/` define the main site sections.
+- `_posts/` stores blog posts.
+
+## Next Customization Targets
+
+- Replace example members in `_members/`.
+- Replace example projects and citation sources in `_data/`.
+- Replace placeholder copy in `index.md`, `research/`, `projects/`, `team/`, `blog/`, and `contact/`.
