@@ -6,10 +6,20 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
-  padding: 40px;
+  gap: 14px;
+  padding: 36px 24px 44px;
   line-height: var(--spacing);
-  box-shadow: var(--shadow);
+  border-top: 1px solid rgba(23, 50, 74, 0.08);
+  box-shadow: none;
+  text-align: center;
+}
+
+html[data-dark="true"] footer {
+  border-top: 1px solid rgba(237, 245, 251, 0.08);
+}
+
+footer.background:before {
+  opacity: 0;
 }
 
 footer a {

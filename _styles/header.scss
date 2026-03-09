@@ -12,19 +12,26 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  box-shadow: var(--shadow);
+  gap: 24px;
+  padding: 18px clamp(20px, 4vw, 44px);
+  background: linear-gradient(90deg, #041428 0%, #0b2742 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+  backdrop-filter: blur(16px);
 
   @if $sticky {
     position: sticky !important;
     top: 0;
-    z-index: 10 !important;
+    z-index: 20 !important;
   }
 }
 
+header.background:before {
+  opacity: 0;
+}
+
 header a {
-  color: var(--text);
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -32,14 +39,14 @@ header a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
 }
 
 .logo {
-  height: $logo;
+  height: 44px;
 }
 
 .logo > * {
@@ -49,22 +56,27 @@ header a {
 
 .title-text {
   display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 5px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2px;
   min-width: 0;
-  font-family: var(--title);
+  font-family: var(--heading);
   text-align: left;
 }
 
 .title {
-  font-size: var(--large);
+  font-size: 1rem;
+  font-weight: var(--bold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .subtitle {
-  opacity: 0.65;
-  font-weight: var(--thin);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.92rem;
+  font-weight: var(--regular);
 }
 
 .nav-toggle {
@@ -73,7 +85,7 @@ header a {
   width: 30px;
   height: 30px;
   margin: 0;
-  color: var(--text);
+  color: #ffffff;
   appearance: none;
   transition: background var(--transition);
 }
@@ -83,7 +95,7 @@ header a {
   position: absolute;
   left: 50%;
   top: 50%;
-  color: var(--text);
+  color: #ffffff;
   font-size: 15px;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -99,17 +111,27 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 18px;
   font-family: var(--heading);
-  text-transform: uppercase;
+  font-size: 0.96rem;
+  font-weight: var(--semi-bold);
+  text-transform: none;
 }
 
 nav > a {
-  padding: 5px;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 nav > a:hover {
-  color: var(--primary);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+nav > a[data-active] {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.95);
 }
 
 header:not([data-big]) {
@@ -128,6 +150,7 @@ header:not([data-big]) {
       align-items: flex-end;
       flex-direction: column;
       width: 100%;
+      padding-top: 8px;
     }
   }
 }
@@ -160,6 +183,7 @@ header[data-big] {
 
   .title {
     font-size: var(--xxl);
+    letter-spacing: 0.08em;
   }
 
   .subtitle {

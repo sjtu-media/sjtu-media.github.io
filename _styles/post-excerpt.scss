@@ -12,7 +12,8 @@ $wrap: 800px;
   display: flex;
   margin: 20px 0;
   border-radius: var(--rounded);
-  background: var(--background);
+  background: linear-gradient(180deg, var(--background), var(--background-alt));
+  border: 1px solid rgba(15, 110, 168, 0.08);
   overflow: hidden;
   box-shadow: var(--shadow);
 }

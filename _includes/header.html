@@ -12,7 +12,7 @@
   {% if dark == true or dark == false %}
     data-dark="{{ dark }}"
   {% endif %}
-  {% if page.url == "/" %}
+  {% if page.header-big == true %}
     data-big
   {% endif %}
 >
@@ -41,17 +41,21 @@
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
   <nav>
+    {% assign current_url = page.url %}
     {% assign pages = site.pages
-      | where_exp: "page", "page.nav"
+      | where_exp: "nav_page", "nav_page.nav"
       | sort: "nav.order"
     %}
-    {% for page in pages %}
-      {% if page.nav %}
+    {% for nav_page in pages %}
+      {% if nav_page.nav %}
         <a
-          href="{{ page.dir | relative_url | uri_escape }}"
-          data-tooltip="{{ page.nav.tooltip | xml_escape }}"
+          href="{{ nav_page.url | relative_url | uri_escape }}"
+          data-tooltip="{{ nav_page.nav.tooltip | xml_escape }}"
+          {% if current_url == nav_page.url %}
+            data-active
+          {% endif %}
         >
-          {{ page.title }}
+          {{ nav_page.title }}
         </a>
       {% endif %}
     {% endfor %}

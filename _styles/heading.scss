@@ -7,30 +7,32 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 40px 0 20px 0;
+  margin: 0 0 20px 0;
   font-family: var(--heading);
   font-weight: var(--semi-bold);
   text-align: left;
-  letter-spacing: 1px;
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  margin: 40px 0;
-  font-size: 1.6rem;
-  font-weight: var(--regular);
-  text-transform: uppercase;
-  text-align: center;
+  margin: 0 0 20px 0;
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  font-family: var(--title);
+  font-weight: var(--semi-bold);
+  line-height: 1.02;
+  text-transform: none;
+  text-align: left;
 }
 
 h2 {
-  font-size: 1.6rem;
-  padding-bottom: 5px;
-  border-bottom: solid 1px var(--light-gray);
-  font-weight: var(--regular);
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  padding-bottom: 0;
+  border-bottom: none;
+  font-weight: var(--semi-bold);
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
 }
 
 h4 {

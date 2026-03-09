@@ -1,0 +1,24 @@
+{% assign intro_title = include.title | default: page.title | strip %}
+{% assign intro_eyebrow = include.eyebrow | default: "" | strip %}
+{% assign intro_title_key = intro_title | downcase %}
+{% assign intro_eyebrow_key = intro_eyebrow | downcase %}
+
+<div class="page-intro">
+  {% if intro_eyebrow != "" and intro_eyebrow_key != intro_title_key %}
+    <p class="page-intro__eyebrow">{{ intro_eyebrow }}</p>
+  {% endif %}
+
+  <h1 class="page-intro__title">{{ intro_title }}</h1>
+
+  {% if include.summary %}
+    <div class="page-intro__summary">
+      {{ include.summary | markdownify }}
+    </div>
+  {% endif %}
+
+  {% if include.actions %}
+    <div class="page-intro__actions">
+      {{ include.actions }}
+    </div>
+  {% endif %}
+</div>

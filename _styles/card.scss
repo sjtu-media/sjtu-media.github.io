@@ -9,7 +9,8 @@
   width: 350px;
   max-width: calc(100% - 20px - 20px);
   margin: 20px;
-  background: var(--background);
+  background: linear-gradient(180deg, var(--background), var(--background-alt));
+  border: 1px solid rgba(15, 110, 168, 0.08);
   border-radius: var(--rounded);
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -30,11 +31,12 @@
 .card-text {
   display: inline-flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   gap: 20px;
   max-width: 100%;
   padding: 20px;
+  text-align: left;
 }
 
 .card-text > * {

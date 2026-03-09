@@ -1,9 +1,9 @@
 # site properties and page defaults
 title: SJTU MedIA
 subtitle: Research Group Website
-description: Official website scaffold for the SJTU MedIA research group.
-header: images/background.jpg
-footer: images/background.jpg
+description: Medical image analysis, computational imaging, and AI for healthcare at Shanghai Jiao Tong University.
+header:
+footer:
 proofer: false
 repository: dengyushan/sjtu-media.github.io
 

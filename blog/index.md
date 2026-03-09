@@ -1,21 +1,27 @@
 ---
-title: Blog
+title: News
+permalink: /news/
 nav:
-  order: 4
-  tooltip: Musings and miscellany
+  order: 1
+  tooltip: Updates, announcements, and highlights
 ---
 
-# {% include icon.html icon="fa-solid fa-feather-pointed" %}Blog
+{% capture summary %}
+News, announcements, recruiting notes, tutorials, and paper highlights from the lab.
+{% endcapture %}
 
-Use blog posts for news, announcements, recruitment, tutorials, and paper highlights.
-Replace the sample posts in `_posts/` with your own content when you're ready.
+{% include page-intro.html eyebrow="News" title=page.title summary=summary %}
 
 {% include section.html %}
 
-{% include search-box.html %}
+<div class="page-toolbar">
+  <h2>Browse Posts</h2>
+  <p class="page-note">Search the archive or filter by tags. Replace the sample posts in `_posts/` with your own news items when ready.</p>
+  {% include search-box.html %}
+  {% include tags.html tags=site.tags link="news" %}
+  {% include search-info.html %}
+</div>
 
-{% include tags.html tags=site.tags %}
-
-{% include search-info.html %}
+{% include section.html %}
 
 {% include list.html data="posts" component="post-excerpt" %}

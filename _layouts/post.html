@@ -2,9 +2,13 @@
 layout: default
 ---
 
-{% include section.html background=page.image %}
+{% capture summary %}
+{{ page.excerpt | strip_html | strip_newlines | truncate: 240 }}
+{% endcapture %}
 
-<h1 class="center">{{ page.title }}</h1>
+{% include section.html %}
+
+{% include page-intro.html eyebrow="News" title=page.title summary=summary %}
 
 {%
   include post-info.html
@@ -17,7 +21,17 @@ layout: default
 
 {% include section.html %}
 
-{{ content }}
+{% if page.image %}
+  <div class="page-panel">
+    <img class="page-wide-image" src="{{ page.image | relative_url | uri_escape }}" alt="{{ page.title | escape }}" {% include fallback.html %}>
+  </div>
+
+  {% include section.html %}
+{% endif %}
+
+<div class="page-panel page-richtext">
+  {{ content }}
+</div>
 
 {% include section.html %}
 

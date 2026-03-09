@@ -1,27 +1,41 @@
 ---
-title: Projects
+title: Publication
+permalink: /publication/
 nav:
-  order: 2
-  tooltip: Software, datasets, and more
+  order: 3
+  tooltip: Publications and citation records
 ---
 
-# {% include icon.html icon="fa-solid fa-wrench" %}Projects
+{% assign publications = site.data.citations | sort: "date" | reverse %}
+{% assign featured_publication = publications | first %}
 
-Use this page to showcase software, datasets, collaborations, and long-running research directions.
-Edit `_data/projects.yaml` to replace the sample entries with your own.
+{% capture summary %}
+The publication page is driven by citation data generated from your ORCID, DOI, PubMed, and related sources.
+{% endcapture %}
 
-{% include tags.html tags="publication, resource, website" %}
+{% include page-intro.html eyebrow="Publication" title=page.title summary=summary %}
 
-{% include search-info.html %}
+{% if featured_publication %}
+  {% include section.html %}
+
+  <div class="page-section-head">
+    <p class="page-section-head__eyebrow">Highlighted</p>
+    <h2>Selected Publication</h2>
+    <p class="page-section-head__summary">Use the top slot for a recent or representative paper.</p>
+  </div>
+
+  {% include citation.html lookup=featured_publication.id style="rich" %}
+{% endif %}
 
 {% include section.html %}
 
-## Featured
-
-{% include list.html component="card" data="projects" filter="group == 'featured'" %}
+<div class="page-toolbar">
+  <h2>Search Publications</h2>
+  <p class="page-note">Update `_data/sources.yaml`, `_data/orcid.yaml`, and related files to replace the sample records with your lab's real publication list.</p>
+  {% include search-box.html %}
+  {% include search-info.html %}
+</div>
 
 {% include section.html %}
 
-## More
-
-{% include list.html component="card" data="projects" filter="!group" style="small" %}
+{% include list.html data="citations" component="citation" style="rich" %}

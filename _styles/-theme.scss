@@ -3,52 +3,52 @@
 
 // colors
 [data-dark="false"] {
-  --primary: #0795d9;
-  --secondary: #7dd3fc;
-  --text: #000000;
-  --background: #ffffff;
-  --background-alt: #fafafa;
-  --light-gray: #e0e0e0;
-  --gray: #808080;
-  --dark-gray: #404040;
-  --overlay: #00000020;
+  --primary: #0f6ea8;
+  --secondary: #dbe9f4;
+  --text: #17324a;
+  --background: #f7fafc;
+  --background-alt: #edf3f8;
+  --light-gray: #d8e2ec;
+  --gray: #6c8094;
+  --dark-gray: #284760;
+  --overlay: #17324a1c;
 }
 [data-dark="true"] {
-  --primary: #0795d9;
-  --secondary: #075985;
-  --text: #ffffff;
-  --background: #181818;
-  --background-alt: #1c1c1c;
-  --light-gray: #404040;
-  --gray: #808080;
-  --dark-gray: #b0b0b0;
-  --overlay: #ffffff10;
+  --primary: #6ab5e3;
+  --secondary: #20384e;
+  --text: #edf5fb;
+  --background: #101c29;
+  --background-alt: #162535;
+  --light-gray: #294155;
+  --gray: #93aabf;
+  --dark-gray: #d7e3ed;
+  --overlay: #02060a40;
 }
 
 :root {
   // font families
-  --title: "Barlow", sans-serif;
-  --heading: "Barlow", sans-serif;
-  --body: "Barlow", sans-serif;
-  --code: "Roboto Mono", monospace;
+  --title: "Source Serif 4", serif;
+  --heading: "IBM Plex Sans", sans-serif;
+  --body: "IBM Plex Sans", sans-serif;
+  --code: "IBM Plex Mono", monospace;
 
   // font sizes
   --large: 1.2rem;
-  --xl: 1.4rem;
-  --xxl: 1.6rem;
+  --xl: 1.5rem;
+  --xxl: 1.8rem;
 
   // font weights
-  --thin: 200;
+  --thin: 300;
   --regular: 400;
-  --semi-bold: 500;
-  --bold: 600;
+  --semi-bold: 600;
+  --bold: 700;
 
   // text line spacing
   --spacing: 2;
   --compact: 1.5;
 
   // effects
-  --rounded: 3px;
-  --shadow: 0 0 10px 0 var(--overlay);
-  --transition: 0.2s ease;
+  --rounded: 20px;
+  --shadow: 0 22px 50px -28px var(--overlay);
+  --transition: 0.22s ease;
 }
