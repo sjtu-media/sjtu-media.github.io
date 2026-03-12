@@ -26,6 +26,12 @@
 }
 
 :root {
+  --chrome-start: #163d60;
+  --chrome-end: #2e628a;
+  --chrome-border: rgba(255, 255, 255, 0.14);
+  --chrome-text: #ffffff;
+  --chrome-text-muted: rgba(255, 255, 255, 0.8);
+
   // font families
   --title: "Source Serif 4", serif;
   --heading: "IBM Plex Sans", sans-serif;

@@ -15,8 +15,7 @@ header {
   flex-wrap: wrap;
   gap: 24px;
   padding: 18px clamp(20px, 4vw, 44px);
-  background: linear-gradient(90deg, #041428 0%, #0b2742 100%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--chrome-border);
   box-shadow: none;
   backdrop-filter: blur(16px);
 
@@ -27,12 +26,20 @@ header {
   }
 }
 
+header.background {
+  background: linear-gradient(
+    90deg,
+    var(--chrome-start) 0%,
+    var(--chrome-end) 100%
+  );
+}
+
 header.background:before {
   opacity: 0;
 }
 
 header a {
-  color: #ffffff;
+  color: var(--chrome-text);
   text-decoration: none;
 }
 
@@ -82,7 +89,7 @@ header a {
   font-weight: var(--bold);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--chrome-text);
 }
 
 .title-mobile {
@@ -90,7 +97,7 @@ header a {
 }
 
 .subtitle {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--chrome-text-muted);
   font-size: 0.92rem;
   font-weight: var(--regular);
 }
@@ -101,7 +108,7 @@ header a {
   width: 30px;
   height: 30px;
   margin: 0;
-  color: #ffffff;
+  color: var(--chrome-text);
   appearance: none;
   transition: background var(--transition);
 }
@@ -111,7 +118,7 @@ header a {
   position: absolute;
   left: 50%;
   top: 50%;
-  color: #ffffff;
+  color: var(--chrome-text);
   font-size: 15px;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -139,16 +146,16 @@ nav {
 nav > a {
   padding: 8px 0;
   border-bottom: 2px solid transparent;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--chrome-text-muted);
 }
 
 nav > a:hover {
-  color: #ffffff;
+  color: var(--chrome-text);
   border-color: rgba(255, 255, 255, 0.9);
 }
 
 nav > a[data-active] {
-  color: #ffffff;
+  color: var(--chrome-text);
   border-color: rgba(255, 255, 255, 0.95);
 }
 
@@ -160,7 +167,7 @@ header .dark-toggle {
 }
 
 header .dark-toggle:after {
-  color: #ffffff;
+  color: var(--chrome-text);
 }
 
 header .dark-toggle:hover {

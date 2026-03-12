@@ -8,14 +8,19 @@ footer {
   flex-direction: column;
   gap: 14px;
   padding: 36px 24px 44px;
+  color: var(--chrome-text);
   line-height: var(--spacing);
-  border-top: 1px solid rgba(23, 50, 74, 0.08);
+  border-top: 1px solid var(--chrome-border);
   box-shadow: none;
   text-align: center;
 }
 
-html[data-dark="true"] footer {
-  border-top: 1px solid rgba(237, 245, 251, 0.08);
+footer.background {
+  background: linear-gradient(
+    90deg,
+    var(--chrome-start) 0%,
+    var(--chrome-end) 100%
+  );
 }
 
 footer.background:before {
@@ -23,11 +28,11 @@ footer.background:before {
 }
 
 footer a {
-  color: var(--text) !important;
+  color: var(--chrome-text-muted) !important;
 }
 
 footer a:hover {
-  color: var(--primary) !important;
+  color: var(--chrome-text) !important;
 }
 
 footer .icon {
