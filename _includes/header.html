@@ -1,5 +1,7 @@
 {% assign image = page.header | default: site.header %}
 {% assign dark = page.header-dark | is_nil: site.header-dark | is_nil: true %}
+{% assign page_lang = page.lang | default: "zh" %}
+{% assign t = site.data.i18n[page_lang] %}
 
 {% assign svg = "images/logo.svg" | file_exists %}
 {% assign png = "images/logo.png" | file_exists %}
@@ -20,7 +22,6 @@
     data-big
   {% endif %}
 >
-  {% assign page_lang = page.lang | default: "zh" %}
   {% assign home_url = "/" | append: page_lang | append: "/" %}
   {% assign current_url = page.url %}
   {% assign pages = site.pages
@@ -62,7 +63,7 @@
       </span>
     {% endif %}
     {% if site.logo-text != false %}
-      <span class="title-text" data-tooltip="Home">
+      <span class="title-text" data-tooltip="{{ t.header.home_tooltip | default: 'Home' }}">
         {% if site.title and site.show-title != false %}
           <span class="title title-desktop">{{ site.title }}</span>
         {% endif %}
@@ -81,14 +82,15 @@
   <nav>
     {% for nav_page in pages %}
       {% if nav_page.nav %}
+        {% assign nav_copy = t.nav[nav_page.lang_ref] %}
         <a
           href="{{ nav_page.url | relative_url | uri_escape }}"
-          data-tooltip="{{ nav_page.nav.tooltip | xml_escape }}"
+          data-tooltip="{{ nav_copy.tooltip | default: nav_page.nav.tooltip | xml_escape }}"
           {% if current_url == nav_page.url %}
             data-active
           {% endif %}
         >
-          {{ nav_page.title }}
+          {{ nav_copy.label | default: nav_page.title }}
         </a>
       {% endif %}
     {% endfor %}
@@ -101,20 +103,20 @@
       data-lang-current="{{ page_lang }}"
     >
       {% if page_lang == "zh" %}
-        中文
+        {{ t.header.language_switch.zh | default: "中文" }}
         <span aria-hidden="true">/</span>
-        EN
+        {{ t.header.language_switch.en | default: "EN" }}
       {% else %}
-        ZH
+        {{ t.header.language_switch.zh | default: "ZH" }}
         <span aria-hidden="true">/</span>
-        English
+        {{ t.header.language_switch.en | default: "English" }}
       {% endif %}
     </a>
 
     <input
       type="checkbox"
       class="dark-toggle"
-      data-tooltip="Dark mode"
+      data-tooltip="{{ t.header.dark_mode | default: 'Dark mode' }}"
       aria-label="toggle dark mode"
       oninput="onDarkToggleChange(event)"
     >

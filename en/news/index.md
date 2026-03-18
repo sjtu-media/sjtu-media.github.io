@@ -8,17 +8,18 @@ nav:
   tooltip: Updates, announcements, and highlights
 ---
 
+{% assign t = site.data.i18n[page.lang] %}
 {% capture summary %}
-News, announcements, recruiting notes, tutorials, and paper highlights from the lab.
+{{ t.pages.news.summary }}
 {% endcapture %}
 
-{% include page-intro.html eyebrow="News" title=page.title summary=summary %}
+{% include page-intro.html eyebrow=t.pages.news.eyebrow title=t.pages.news.title summary=summary %}
 
 {% include section.html %}
 
 <div class="page-toolbar">
-  <h2>Browse Posts</h2>
-  <p class="page-note">Search the archive or filter by tags. Replace the sample posts in `_posts/` with your own news items when ready.</p>
+  <h2>{{ t.pages.news.browse_title }}</h2>
+  <p class="page-note">{{ t.pages.news.browse_note }}</p>
   {% include search-box.html %}
   {% include tags.html tags=site.tags link="/en/news/" %}
   {% include search-info.html %}

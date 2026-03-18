@@ -1,4 +1,5 @@
 ---
+title: Home
 lang: en
 lang_ref: home
 permalink: /en/
@@ -6,6 +7,7 @@ permalink: /en/
 
 {% include section.html size="wide" %}
 
+{% assign t = site.data.i18n[page.lang] %}
 {% assign featured_projects = site.data.projects | where: "group", "featured" %}
 {% assign recent_posts = site.posts | sort: "date" | reverse %}
 {% assign featured_post = recent_posts | first %}
@@ -14,88 +16,88 @@ permalink: /en/
 
 <div class="landing-hero">
   <div class="landing-hero__copy">
-    <p class="landing-kicker">Shanghai Jiao Tong University</p>
+    <p class="landing-kicker">{{ t.home.kicker }}</p>
     <h1>{{ site.title }}</h1>
     <p class="landing-lead">
       {{ site.description }}
-      The homepage is now organized around the five primary sections of the site: News, Research, Publication, People, and Contact.
+      {{ t.home.lead_suffix }}
     </p>
     <p class="landing-body">
-      Replace the current sample members, projects, and citation sources with your lab's real records to turn this scaffold into the production website.
+      {{ t.home.body }}
     </p>
     <div class="landing-actions">
-      {% include button.html link="/en/research/" text="Explore research" icon="fa-solid fa-arrow-right" flip=true %}
-      {% include button.html link="/en/publication/" text="View publications" icon="fa-solid fa-book-open" %}
-      {% include button.html link="/en/people/" text="Meet the team" icon="fa-solid fa-people-group" style="bare" %}
+      {% include button.html link="/en/research/" text=t.home.actions.research icon="fa-solid fa-arrow-right" flip=true %}
+      {% include button.html link="/en/publication/" text=t.home.actions.publication icon="fa-solid fa-book-open" %}
+      {% include button.html link="/en/people/" text=t.home.actions.people icon="fa-solid fa-people-group" style="bare" %}
     </div>
     <div class="landing-stats">
       <div class="landing-stat">
         <span class="landing-stat__value">{{ site.members | size }}</span>
-        <span class="landing-stat__label">People profiles</span>
+        <span class="landing-stat__label">{{ t.home.stats.people }}</span>
       </div>
       <div class="landing-stat">
         <span class="landing-stat__value">{{ site.posts | size }}</span>
-        <span class="landing-stat__label">News posts</span>
+        <span class="landing-stat__label">{{ t.home.stats.posts }}</span>
       </div>
       <div class="landing-stat">
         <span class="landing-stat__value">{{ site.data.citations | size }}</span>
-        <span class="landing-stat__label">Publication records</span>
+        <span class="landing-stat__label">{{ t.home.stats.publications }}</span>
       </div>
     </div>
   </div>
   <div class="landing-hero__media">
-    <img src="{{ 'images/background.jpg' | relative_url }}" alt="Laboratory visual placeholder">
-    <p class="landing-hero__caption">Replace this placeholder with a recent lab photo, microscopy panel, or visual summary of your work.</p>
+    <img src="{{ 'images/background.jpg' | relative_url }}" alt="{{ t.home.hero_alt }}">
+    <p class="landing-hero__caption">{{ t.home.hero_caption }}</p>
   </div>
 </div>
 
 {% include section.html %}
 
 <div class="landing-section-head">
-  <p class="landing-kicker">Site Sections</p>
-  <h2>Navigate the Lab Website</h2>
-  <p>Each major part of the site follows the same visual language so visitors can move between updates, research, publications, people, and contact information without a style break.</p>
+  <p class="landing-kicker">{{ t.home.sections.kicker }}</p>
+  <h2>{{ t.home.sections.title }}</h2>
+  <p>{{ t.home.sections.summary }}</p>
 </div>
 
 <div class="section-card-grid">
   <article class="section-card">
     <div class="section-card__icon">{% include icon.html icon="fa-regular fa-newspaper" %}</div>
-    <h3>News</h3>
-    <p>Announcements, events, tutorials, recruiting notes, and paper highlights from the group.</p>
-    <a class="section-card__link" href="{{ '/en/news/' | relative_url }}">Open News <span aria-hidden="true">→</span></a>
+    <h3>{{ t.home.sections.cards.news.title }}</h3>
+    <p>{{ t.home.sections.cards.news.body }}</p>
+    <a class="section-card__link" href="{{ '/en/news/' | relative_url }}">{{ t.home.sections.cards.news.cta }} <span aria-hidden="true">→</span></a>
   </article>
   <article class="section-card">
     <div class="section-card__icon">{% include icon.html icon="fa-solid fa-microscope" %}</div>
-    <h3>Research</h3>
-    <p>Research themes, ongoing directions, datasets, software, and featured projects.</p>
-    <a class="section-card__link" href="{{ '/en/research/' | relative_url }}">Open Research <span aria-hidden="true">→</span></a>
+    <h3>{{ t.home.sections.cards.research.title }}</h3>
+    <p>{{ t.home.sections.cards.research.body }}</p>
+    <a class="section-card__link" href="{{ '/en/research/' | relative_url }}">{{ t.home.sections.cards.research.cta }} <span aria-hidden="true">→</span></a>
   </article>
   <article class="section-card">
     <div class="section-card__icon">{% include icon.html icon="fa-solid fa-book-open" %}</div>
-    <h3>Publication</h3>
-    <p>Auto-generated citation records, highlighted papers, and searchable publication listings.</p>
-    <a class="section-card__link" href="{{ '/en/publication/' | relative_url }}">Open Publication <span aria-hidden="true">→</span></a>
+    <h3>{{ t.home.sections.cards.publication.title }}</h3>
+    <p>{{ t.home.sections.cards.publication.body }}</p>
+    <a class="section-card__link" href="{{ '/en/publication/' | relative_url }}">{{ t.home.sections.cards.publication.cta }} <span aria-hidden="true">→</span></a>
   </article>
   <article class="section-card">
     <div class="section-card__icon">{% include icon.html icon="fa-solid fa-people-group" %}</div>
-    <h3>People</h3>
-    <p>Faculty, students, staff, and alumni managed from the members collection.</p>
-    <a class="section-card__link" href="{{ '/en/people/' | relative_url }}">Open People <span aria-hidden="true">→</span></a>
+    <h3>{{ t.home.sections.cards.people.title }}</h3>
+    <p>{{ t.home.sections.cards.people.body }}</p>
+    <a class="section-card__link" href="{{ '/en/people/' | relative_url }}">{{ t.home.sections.cards.people.cta }} <span aria-hidden="true">→</span></a>
   </article>
   <article class="section-card">
     <div class="section-card__icon">{% include icon.html icon="fa-regular fa-envelope" %}</div>
-    <h3>Contact</h3>
-    <p>Official contact channels, location details, and information for collaborators.</p>
-    <a class="section-card__link" href="{{ '/en/contact/' | relative_url }}">Open Contact <span aria-hidden="true">→</span></a>
+    <h3>{{ t.home.sections.cards.contact.title }}</h3>
+    <p>{{ t.home.sections.cards.contact.body }}</p>
+    <a class="section-card__link" href="{{ '/en/contact/' | relative_url }}">{{ t.home.sections.cards.contact.cta }} <span aria-hidden="true">→</span></a>
   </article>
 </div>
 
 {% include section.html %}
 
 <div class="landing-section-head">
-  <p class="landing-kicker">Updates</p>
-  <h2>Latest News</h2>
-  <p>Recent posts are highlighted prominently, with enough space for one featured update and quick follow-on items.</p>
+  <p class="landing-kicker">{{ t.home.updates.kicker }}</p>
+  <h2>{{ t.home.updates.title }}</h2>
+  <p>{{ t.home.updates.summary }}</p>
 </div>
 
 <div class="news-layout">
@@ -126,9 +128,9 @@ permalink: /en/
 {% include section.html %}
 
 <div class="landing-section-head">
-  <p class="landing-kicker">Research</p>
-  <h2>Research Directions</h2>
-  <p>Research content and featured projects now live under the same top-level section rather than a separate Projects tab.</p>
+  <p class="landing-kicker">{{ t.home.research.kicker }}</p>
+  <h2>{{ t.home.research.title }}</h2>
+  <p>{{ t.home.research.summary }}</p>
 </div>
 
 <div class="card-grid">
@@ -142,7 +144,7 @@ permalink: /en/
           <span class="project-tag">{{ tag }}</span>
         {% endfor %}
       </div>
-      <a class="project-link" href="{{ '/en/research/' | relative_url }}">See research <span aria-hidden="true">→</span></a>
+      <a class="project-link" href="{{ '/en/research/' | relative_url }}">{{ t.home.research.cta }} <span aria-hidden="true">→</span></a>
     </article>
   {% endfor %}
 </div>
@@ -150,9 +152,9 @@ permalink: /en/
 {% include section.html %}
 
 <div class="landing-section-head">
-  <p class="landing-kicker">Publication</p>
-  <h2>Latest Publications</h2>
-  <p>The publication section remains data-driven and searchable, but now sits as its own first-class page in the navigation.</p>
+  <p class="landing-kicker">{{ t.home.publication.kicker }}</p>
+  <h2>{{ t.home.publication.title }}</h2>
+  <p>{{ t.home.publication.summary }}</p>
 </div>
 
 <div class="card-grid">
@@ -165,7 +167,7 @@ permalink: /en/
       <p class="news-meta">{{ paper.date | date: "%Y" }} · {{ paper.publisher }}</p>
       <h3>{{ paper.title }}</h3>
       <p class="paper-authors">{{ author_list }}</p>
-      <a class="paper-link" href="{{ '/en/publication/' | relative_url }}">Browse publications <span aria-hidden="true">→</span></a>
+      <a class="paper-link" href="{{ '/en/publication/' | relative_url }}">{{ t.home.publication.cta }} <span aria-hidden="true">→</span></a>
     </article>
   {% endfor %}
 </div>
@@ -173,9 +175,9 @@ permalink: /en/
 {% include section.html %}
 
 <div class="landing-section-head">
-  <p class="landing-kicker">People</p>
-  <h2>People Snapshot</h2>
-  <p>Team members are surfaced directly from the members collection so the homepage stays aligned with the People page.</p>
+  <p class="landing-kicker">{{ t.home.people.kicker }}</p>
+  <h2>{{ t.home.people.title }}</h2>
+  <p>{{ t.home.people.summary }}</p>
 </div>
 
 <div class="people-preview">
@@ -188,12 +190,12 @@ permalink: /en/
 
 <div class="landing-cta">
   <div>
-    <p class="landing-kicker">Contact</p>
-    <h2>Make it easy to reach the lab</h2>
-    <p>The contact section is now one of the five primary site areas. Replace the placeholder details with your official lab email, office location, and collaboration or recruiting information.</p>
+    <p class="landing-kicker">{{ t.home.contact.kicker }}</p>
+    <h2>{{ t.home.contact.title }}</h2>
+    <p>{{ t.home.contact.summary }}</p>
   </div>
   <div class="landing-cta__actions">
-    {% include button.html link="/en/contact/" text="Open contact page" icon="fa-solid fa-arrow-right" flip=true %}
-    {% include button.html link="/en/people/" text="View people" style="bare" %}
+    {% include button.html link="/en/contact/" text=t.home.contact.actions.contact icon="fa-solid fa-arrow-right" flip=true %}
+    {% include button.html link="/en/people/" text=t.home.contact.actions.people style="bare" %}
   </div>
 </div>
