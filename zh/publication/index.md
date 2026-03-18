@@ -9,11 +9,8 @@ nav:
 ---
 
 {% assign publications = site.data.citations | sort: "date" | reverse %}
-{% assign featured_publication = publications | first %}
-
-{% capture summary %}
-论文页面由 ORCID、DOI、PubMed 等来源生成的引文数据驱动。
-{% endcapture %}
+{% assign featured_candidates = site.data.citations | where: "featured", true %}
+{% assign featured_publication = featured_candidates | first | default: publications.first %}
 
 {% include page-intro.html eyebrow="论文" title=page.title summary=summary %}
 
@@ -21,9 +18,7 @@ nav:
   {% include section.html %}
 
   <div class="page-section-head">
-    <p class="page-section-head__eyebrow">推荐</p>
     <h2>代表性论文</h2>
-    <p class="page-section-head__summary">顶部位置适合放最近发表或最具代表性的论文。</p>
   </div>
 
   {% include citation.html lookup=featured_publication.id style="rich" %}
@@ -33,7 +28,6 @@ nav:
 
 <div class="page-toolbar">
   <h2>检索论文</h2>
-  <p class="page-note">更新 `_data/sources.yaml`、`_data/orcid.yaml` 等文件后，就可以用实验室真实论文列表替换示例记录。</p>
   {% include search-box.html %}
   {% include search-info.html %}
 </div>

@@ -1,265 +1,360 @@
 # DO NOT EDIT, GENERATED AUTOMATICALLY
 
-- id: doi:10.1101/2025.06.19.660613
-  title: Scalable data harmonization for single-cell image-based profiling with CytoTable
+- id: doi:10.48550/arXiv.2602.19178
+  title: 'EMAD: Evidence-Centric Grounded Multimodal Diagnosis for Alzheimer''s Disease'
   authors:
-  - Dave Bunten
-  - Jenna Tomkinson
-  - Erik Serrano
-  - Michael J. Lippincott
-  - Kenneth I. Brewer
-  - Vince Rubinetti
-  - Faisal Alquaddoomi
-  - Gregory P. Way
-  publisher: openRxiv
-  date: '2025-06-25'
-  link: https://doi.org/g9rfr3
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1093/nar/gkad1082
-  title: "The Monarch Initiative in 2024: an analytic platform integrating phenotypes,\
-    \ genes\_and diseases across species"
-  authors:
-  - Tim E Putman
-  - Kevin Schaper
-  - Nicolas Matentzoglu
-  - "Vincent\_P Rubinetti"
-  - "Faisal\_S Alquaddoomi"
-  - Corey Cox
-  - J Harry Caufield
-  - Glass Elsarboukh
-  - Sarah Gehrke
-  - Harshad Hegde
-  - "Justin\_T Reese"
-  - Ian Braun
-  - "Richard\_M Bruskiewich"
-  - Luca Cappelletti
-  - Seth Carbon
-  - "Anita\_R Caron"
-  - "Lauren\_E Chan"
-  - "Christopher\_G Chute"
-  - "Katherina\_G Cortes"
-  - "Vin\xEDcius De\_Souza"
-  - Tommaso Fontana
-  - "Nomi\_L Harris"
-  - "Emily\_L Hartley"
-  - Eric Hurwitz
-  - "Julius\_O B Jacobsen"
-  - Madan Krishnamurthy
-  - "Bryan\_J Laraway"
-  - "James\_A McLaughlin"
-  - "Julie\_A McMurry"
-  - "Sierra\_A T Moxon"
-  - "Kathleen\_R Mullen"
-  - "Shawn\_T O\u2019Neil"
-  - "Kent\_A Shefchek"
-  - Ray Stefancsik
-  - Sabrina Toro
-  - "Nicole\_A Vasilevsky"
-  - "Ramona\_L Walls"
-  - "Patricia\_L Whetzel"
-  - David Osumi-Sutherland
-  - Damian Smedley
-  - "Peter\_N Robinson"
-  - "Christopher\_J Mungall"
-  - "Melissa\_A Haendel"
-  - "Monica\_C Munoz-Torres"
-  publisher: Nucleic Acids Research
-  date: '2023-11-24'
-  link: https://doi.org/gs6kmr
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1101/2023.10.11.560955
-  title: Integration of 168,000 samples reveals global patterns of the human gut microbiome
-  authors:
-  - Richard J. Abdill
-  - Samantha P. Graham
-  - Vincent Rubinetti
-  - Frank W. Albert
-  - Casey S. Greene
-  - Sean Davis
-  - Ran Blekhman
-  publisher: openRxiv
-  date: '2023-10-11'
-  link: https://doi.org/gsvf5z
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1093/nar/gkad289
-  title: 'MyGeneset.info: an interactive and programmatic platform for community-curated
-    and user-created collections of genes'
-  authors:
-  - Ricardo Avila
-  - Vincent Rubinetti
-  - Xinghua Zhou
-  - Dongbo Hu
-  - Zhongchao Qian
-  - Marco Alvarado Cano
-  - Everaldo Rodolpho
-  - Ginger Tsueng
-  - Casey Greene
-  - Chunlei Wu
-  publisher: Nucleic Acids Research
-  date: '2023-04-18'
-  link: https://doi.org/gr5hb5
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1101/2023.01.05.522941
-  title: Hetnet connectivity search provides rapid insights into how two biomedical
-    entities are related
-  authors:
-  - Daniel S. Himmelstein
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Kyle Kloster
-  - Benjamin J. Heil
-  - Faisal Alquaddoomi
-  - Dongbo Hu
-  - David N. Nicholson
-  - Yun Hao
-  - Blair D. Sullivan
-  - Michael W. Nagle
-  - Casey S. Greene
-  publisher: openRxiv
-  date: '2023-01-07'
-  link: https://doi.org/grmcb9
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1093/gigascience/giad047
-  title: Hetnet connectivity search provides rapid insights into how biomedical entities
-    are related
-  authors:
-  - Daniel S Himmelstein
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Kyle Kloster
-  - Benjamin J Heil
-  - Faisal Alquaddoomi
-  - Dongbo Hu
-  - David N Nicholson
-  - Yun Hao
-  - Blair D Sullivan
-  - Michael W Nagle
-  - Casey S Greene
-  publisher: GigaScience
-  date: '2022-12-28'
-  link: https://doi.org/gsd85n
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1101/2022.02.18.461833
-  title: 'MolEvolvR: A web-app for characterizing proteins using molecular evolution
-    and phylogeny'
-  authors:
-  - Faisal S Alquaddoomi
-  - Joseph T Burke
-  - Lo Sosinski
-  - David A Mayer
-  - Evan P Brenner
-  - Samuel Z Chen
-  - Jacob D Krol
-  - Ethan P Wolfe
-  - Vincent P Rubinetti
-  - Shaddai Amolitos
-  - Kellen M Reason
-  - John B Johnston
-  - Janani Ravi
-  publisher: openRxiv
-  date: '2022-02-22'
-  link: https://doi.org/gstx7j
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1186/s13059-020-02021-3
-  title: Compressing gene expression data using multiple latent space dimensionalities
-    learns complementary biological representations
-  authors:
-  - Gregory P. Way
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Daniel S. Himmelstein
-  - Casey S. Greene
-  publisher: Genome Biology
-  date: '2020-05-11'
-  link: https://doi.org/gg2mjh
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1371/journal.pcbi.1007128
-  title: Open collaborative writing with Manubot
-  authors:
-  - Daniel S. Himmelstein
-  - Vincent Rubinetti
-  - David R. Slochower
-  - Dongbo Hu
-  - Venkat S. Malladi
-  - Casey S. Greene
-  - Anthony Gitter
-  publisher: PLOS Computational Biology
-  date: '2020-12-04'
-  link: https://doi.org/c7np
-  orcid: 0000-0002-4655-3773
+  - Qiuhui Chen
+  - Xuancheng Yao
+  - Zhenglei Zhou
+  - Xinyue Hu
+  - Yi Hong
+  publisher: arXiv
+  date: '2026-01-01'
+  link: https://doi.org/hbs2tw
   plugin: sources.py
   file: sources.yaml
-  type: paper
-  description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed
-    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  image: https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=info:doi/10.1371/journal.pcbi.1007128.g001&rev=2
-  buttons:
-  - type: manubot
-    link: https://greenelab.github.io/meta-review/
-  - type: source
-    text: Manuscript Source
-    link: https://github.com/greenelab/meta-review
-  - type: website
-    link: http://manubot.org/
-  tags:
-  - open science
-  - collaboration
-  repo: greenelab/meta-review
-- id: doi:10.1101/573782
-  title: Sequential compression of gene expression across dimensionalities and methods
-    reveals no single best method or dimensionality
+- id: doi:10.1109/TMI.2026.3664940
+  title: 'Harmonizing Generalization and Specialization: Uncertainty-Informed Collaborative
+    Learning for Semi-supervised Medical Image Segmentation'
   authors:
-  - Gregory P. Way
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Daniel S. Himmelstein
-  - Casey S. Greene
-  publisher: openRxiv
-  date: '2019-03-11'
-  link: https://doi.org/gfxjxf
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1016/j.csbj.2020.05.017
-  title: Constructing knowledge graphs and their biomedical applications
-  authors:
-  - David N. Nicholson
-  - Casey S. Greene
-  publisher: Computational and Structural Biotechnology Journal
-  date: '2020-01-01'
-  link: https://doi.org/gg7m48
-  image: https://ars.els-cdn.com/content/image/1-s2.0-S2001037020302804-gr1.jpg
+  - Wenjing Lu
+  - Yi Hong
+  - Yang Yang
+  publisher: IEEE Transactions on Medical Imaging
+  date: '2026-01-01'
+  link: https://doi.org/hbs2t2
   plugin: sources.py
   file: sources.yaml
-- id: doi:10.7554/eLife.32822
-  title: Sci-Hub provides access to nearly all scholarly literature
+- id: doi:10.1109/JBHI.2025.3609739
+  title: Enhancing 3D Medical Image Understanding With Pretraining Aided by 2D Multimodal
+    Large Language Models
   authors:
-  - Daniel S Himmelstein
-  - Ariel Rodriguez Romero
-  - Jacob G Levernier
-  - Thomas Anthony Munro
-  - Stephen Reid McLaughlin
-  - Bastian Greshake Tzovaras
-  - Casey S Greene
-  publisher: eLife
-  date: '2018-03-01'
-  link: https://doi.org/ckcj
-  image: https://iiif.elifesciences.org/lax:32822%2Felife-32822-fig8-v3.tif/full/863,/0/default.webp
+  - Qiuhui Chen
+  - Xuancheng Yao
+  - Huping Ye
+  - Yi Hong
+  publisher: IEEE Journal of Biomedical and Health Informatics
+  date: '2026-02-01'
+  link: https://doi.org/hbs2kx
+  image: https://ieeexplore.ieee.org/ielx8/6221020/11372623/11164292/graphical_abstract/jbhi-gagraphic-3609739.jpg
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/TMI.2025.3594364
+  title: "HoloDx: Knowledge- and Data-Driven Multimodal Diagnosis of Alzheimer\u2019\
+    s Disease"
+  authors:
+  - Qiuhui Chen
+  - Jintao Wang
+  - Gang Wang
+  - Yi Hong
+  publisher: IEEE Transactions on Medical Imaging
+  date: '2026-01-01'
+  link: https://doi.org/hbs2s8
+  image: https://ieeexplore.ieee.org/ielx8/42/11328978/11105511/graphical_abstract/tmi-gagraphic-3594364.jpg
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/ICASSP49660.2025.10889731
+  title: Enhancing 3D Medical Image Understanding with 2D Multimodal Large Language
+    Models
+  authors:
+  - Qiuhui Chen
+  - Xuancheng Yao
+  - Huping Ye
+  - Yi Hong
+  publisher: ICASSP 2025 - 2025 IEEE International Conference on Acoustics, Speech
+    and Signal Processing (ICASSP)
+  date: '2025-04-06'
+  link: https://doi.org/hbs2tb
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10887540/10887541/10889731/chen1-p5-chen-small.gif
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/ICASSP49660.2025.10887845
+  title: Brain MRI Segmentation with Language-Driven Detection and Context-Aware Descriptions
+  authors:
+  - Qiang Fu
+  - Xinyuan Xia
+  - Yi Hong
+  publisher: ICASSP 2025 - 2025 IEEE International Conference on Acoustics, Speech
+    and Signal Processing (ICASSP)
+  date: '2025-04-06'
+  link: https://doi.org/hbs2vh
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10887540/10887541/10887845/fu1-p5-fu-small.gif
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/ICASSP49660.2025.10890649
+  title: Deep Metamorphic Registration for Tumor-Affected Medical Image Alignment
+  authors:
+  - Wei Jie Pan
+  - Yi Hong
+  publisher: ICASSP 2025 - 2025 IEEE International Conference on Acoustics, Speech
+    and Signal Processing (ICASSP)
+  date: '2025-04-06'
+  link: https://doi.org/hbs2vj
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10887540/10887541/10890649/pan1-p5-pan-small.gif
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/s00138-024-01643-y
+  title: Volumetric medical image segmentation via scribble annotations and shape
+    priors
+  authors:
+  - Qiuhui Chen
+  - Haiying Lyu
+  - Xinyue Hu
+  - Yong Lu
+  - Yi Hong
+  publisher: Machine Vision and Applications
+  date: '2024-12-17'
+  link: https://doi.org/hbs2tj
+  image: https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs00138-024-01643-y/MediaObjects/138_2024_1643_Fig1_HTML.png?as=webp
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/BIBM62325.2024.10822398
+  title: 'UP-SAM: Uncertainty-Informed Adaptation of Segment Anything Model for Semi-Supervised
+    Medical Image Segmentation'
+  authors:
+  - Wenjing Lu
+  - Yi Hong
+  - Yang Yang
+  publisher: 2024 IEEE International Conference on Bioinformatics and Biomedicine
+    (BIBM)
+  date: '2024-12-03'
+  link: https://doi.org/hbs2vk
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10821710/10821711/10822398/lu1-p6-lu-small.gif
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/BIBM62325.2024.10821994
+  title: Enhancing Atlas Construction via Edge-Assisted 3D Latent Diffusion Models
+    for Brain MRI Generation
+  authors:
+  - Sheng Xu
+  - Yi Hong
+  publisher: 2024 IEEE International Conference on Bioinformatics and Biomedicine
+    (BIBM)
+  date: '2024-12-03'
+  link: https://doi.org/hbs2vm
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10821710/10821711/10821994/xu1-p6-xu-small.gif
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/BIBM62325.2024.10821814
+  title: 'DiffLGE: Diffusion-Based Image Generation for Synthesizing Late Gadolinium
+    Enhancement Scans'
+  authors:
+  - Yushan Deng
+  - Yuqiu Jiang
+  - Yi Hong
+  publisher: 2024 IEEE International Conference on Bioinformatics and Biomedicine
+    (BIBM)
+  date: '2024-12-03'
+  link: https://doi.org/hbs2vn
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10821710/10821711/10821814/deng1-p8-deng-small.gif
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/BIBM62325.2024.10822506
+  title: Epicardial Adipose Tissue Segmentation in MRIs Using Text-Prompted Pretraining
+    Model
+  authors:
+  - Huping Ye
+  - Yushan Deng
+  - Yi Hong
+  publisher: 2024 IEEE International Conference on Bioinformatics and Biomedicine
+    (BIBM)
+  date: '2024-12-03'
+  link: https://doi.org/hbs2vp
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10821710/10821711/10822506/ye2-p8-ye-small.gif
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/BIBM62325.2024.10821851
+  title: 'Alifuse: Aligning and Fusing Multimodal Medical Data for Computer-Aided
+    Diagnosis'
+  authors:
+  - Qiuhui Chen
+  - Yi Hong
+  publisher: 2024 IEEE International Conference on Bioinformatics and Biomedicine
+    (BIBM)
+  date: '2024-12-03'
+  link: https://doi.org/hbs2vq
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10821710/10821711/10821851/chen1-p6-chen-small.gif
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1145/3664647.3681140
+  title: 'SMART: Self-Weighted Multimodal Fusion for Diagnostics of Neurodegenerative
+    Disorders'
+  authors:
+  - Qiuhui Chen
+  - Yi Hong
+  publisher: Proceedings of the 32nd ACM International Conference on Multimedia
+  date: '2024-10-28'
+  link: https://doi.org/hbs2tc
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/978-3-031-72069-7_63
+  title: "NODER: Image Sequence Regression Based on\_Neural Ordinary Differential\
+    \ Equations"
+  authors:
+  - Hao Bai
+  - Yi Hong
+  publisher: Lecture Notes in Computer Science
+  date: '2024-01-01'
+  link: https://doi.org/hbs2td
+  image: https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-031-72069-7_63/MediaObjects/631670_1_En_63_Fig1_HTML.png?as=webp
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.48550/arXiv.2403.05141
+  title: 'Med3DInsight: Enhancing 3D Medical Image Understanding with 2D Multi-Modal
+    Large Language Models'
+  authors:
+  - Qiuhui Chen
+  - Huping Ye
+  - Yi Hong
+  publisher: arXiv
+  date: '2024-01-01'
+  link: https://doi.org/hbs2tg
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/978-981-96-0908-6_6
+  title: "MedBLIP: Bootstrapping Language-Image Pretraining from\_3D Medical Images\
+    \ and\_Texts"
+  authors:
+  - Qiuhui Chen
+  - Yi Hong
+  publisher: Lecture Notes in Computer Science
+  date: '2024-12-07'
+  link: https://doi.org/hbs2tq
+  image: https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-981-96-0908-6_6/MediaObjects/645280_1_En_6_Fig1_HTML.png?as=webp
+  featured: true
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/WACV57701.2024.00354
+  title: "LongFormer: Longitudinal Transformer for Alzheimer\u2019s Disease Classification\
+    \ with Structural MRIs"
+  authors:
+  - Qiuhui Chen
+  - Qiang Fu
+  - Hao Bai
+  - Yi Hong
+  publisher: 2024 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)
+  date: '2024-01-03'
+  link: https://doi.org/hbs2tf
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10483279/10483282/10483639/chen1-p10-chen-small.gif
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/BIBM58861.2023.10385819
+  title: 'Pretrain Once and Finetune Many Times: How Pretraining Benefits Brain MRI
+    Segmentation'
+  authors:
+  - Hao Zhang
+  - Sheng Xu
+  - Wei Ren
+  - Huping Ye
+  - Yi Hong
+  publisher: 2023 IEEE International Conference on Bioinformatics and Biomedicine
+    (BIBM)
+  date: '2023-12-05'
+  link: https://doi.org/hbs2vv
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10385250/10385251/10385819/zhang4-p8-zhang-small.gif
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/978-3-031-45087-7_17
+  title: 'MetaRegNet: Metamorphic Image Registration Using Flow-Driven Residual Networks'
+  authors:
+  - Ankita Joshi
+  - Yi Hong
+  publisher: Lecture Notes in Computer Science
+  date: '2023-01-01'
+  link: https://doi.org/hbs2tn
+  image: https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-031-45087-7_17/MediaObjects/555097_1_En_17_Fig1_HTML.png?as=webp
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.media.2023.102917
+  title: 'R2Net: Efficient and flexible diffeomorphic image registration using Lipschitz
+    continuous residual networks'
+  authors:
+  - Ankita Joshi
+  - Yi Hong
+  publisher: Medical Image Analysis
+  date: '2023-10-01'
+  link: https://doi.org/hbs2tm
+  image: https://ars.els-cdn.com/content/image/1-s2.0-S1361841523001779-gr1.jpg
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/978-3-031-43901-8_64
+  title: "A2FSeg: Adaptive Multi-modal Fusion Network for\_Medical Image Segmentation"
+  authors:
+  - Zirui Wang
+  - Yi Hong
+  publisher: Lecture Notes in Computer Science
+  date: '2023-01-01'
+  link: https://doi.org/hbs2vw
+  image: https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-031-43901-8_64/MediaObjects/554073_1_En_64_Fig1_HTML.png?as=webp
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/978-3-031-16452-1_23
+  title: "Scribble2D5: Weakly-Supervised Volumetric Image Segmentation via\_Scribble\
+    \ Annotations"
+  authors:
+  - Qiuhui Chen
+  - Yi Hong
+  publisher: Lecture Notes in Computer Science
+  date: '2022-01-01'
+  link: https://doi.org/hbs2tv
+  image: https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-031-16452-1_23/MediaObjects/539251_1_En_23_Fig1_HTML.png?as=webp
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/ISBI52829.2022.9761693
+  title: Efficient Diffeomorphic Image Registration using Multi-Scale Dual-Phased
+    Learning
+  authors:
+  - Ankita Joshi
+  - Yi Hong
+  publisher: 2022 IEEE 19th International Symposium on Biomedical Imaging (ISBI)
+  date: '2022-03-28'
+  link: https://doi.org/hbs2vx
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/9761376/9761399/9761693/joshi1-p5-joshi-small.gif
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.48550/arXiv.2112.09135
+  title: 'ASC-Net: Unsupervised Medical Anomaly Segmentation Using an Adversarial-based
+    Selective Cutting Network'
+  authors:
+  - Raunak Dey
+  - Wenbo Sun
+  - Haibo Xu
+  - Yi Hong
+  publisher: arXiv
+  date: '2021-01-01'
+  link: https://doi.org/hbs2vz
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/978-3-030-87240-3_23
+  title: 'ASC-Net: Adversarial-Based Selective Network for Unsupervised Anomaly Segmentation'
+  authors:
+  - Raunak Dey
+  - Yi Hong
+  publisher: Lecture Notes in Computer Science
+  date: '2021-01-01'
+  link: https://doi.org/hbs2v2
+  image: https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-030-87240-3_23/MediaObjects/521400_1_En_23_Fig1_HTML.png?as=webp
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.48550/arXiv.2105.11361
+  title: 'DDR-Net: Dividing and Downsampling Mixed Network for Diffeomorphic Image
+    Registration'
+  authors:
+  - Ankita Joshi
+  - Yi Hong
+  publisher: arXiv
+  date: '2021-01-01'
+  link: https://doi.org/hbs2v3
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/ISBI48211.2021.9434168
+  title: 'MDA-Net: Multi-Dimensional Attention-Based Neural Network for 3D Image Segmentation'
+  authors:
+  - Rutu Gandhi
+  - Yi Hong
+  publisher: 2021 IEEE 18th International Symposium on Biomedical Imaging (ISBI)
+  date: '2021-04-13'
+  link: https://doi.org/hbs2v4
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/9433749/9433753/9434168/gandh1-0552-small.gif
   plugin: sources.py
   file: sources.yaml

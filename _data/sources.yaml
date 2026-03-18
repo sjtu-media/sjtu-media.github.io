@@ -1,23 +1,80 @@
-- id: doi:10.1371/journal.pcbi.1007128
-  type: paper
-  description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  date: 2020-12-4
-  image: https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=info:doi/10.1371/journal.pcbi.1007128.g001&rev=2
-  buttons:
-    - type: manubot
-      link: https://greenelab.github.io/meta-review/
-    - type: source
-      text: Manuscript Source
-      link: https://github.com/greenelab/meta-review
-    - type: website
-      link: http://manubot.org/
-  tags:
-    - open science
-    - collaboration
-  repo: greenelab/meta-review
+- id: doi:10.48550/arXiv.2602.19178
 
-- id: doi:10.1016/j.csbj.2020.05.017
-  image: https://ars.els-cdn.com/content/image/1-s2.0-S2001037020302804-gr1.jpg
+- id: doi:10.1109/TMI.2026.3664940
 
-- id: doi:10.7554/eLife.32822
-  image: https://iiif.elifesciences.org/lax:32822%2Felife-32822-fig8-v3.tif/full/863,/0/default.webp
+- id: doi:10.1109/JBHI.2025.3609739
+  image: https://ieeexplore.ieee.org/ielx8/6221020/11372623/11164292/graphical_abstract/jbhi-gagraphic-3609739.jpg
+
+- id: doi:10.1109/TMI.2025.3594364
+  image: https://ieeexplore.ieee.org/ielx8/42/11328978/11105511/graphical_abstract/tmi-gagraphic-3594364.jpg
+
+- id: doi:10.1109/ICASSP49660.2025.10889731
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10887540/10887541/10889731/chen1-p5-chen-small.gif
+
+- id: doi:10.1109/ICASSP49660.2025.10887845
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10887540/10887541/10887845/fu1-p5-fu-small.gif
+
+- id: doi:10.1109/ICASSP49660.2025.10890649
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10887540/10887541/10890649/pan1-p5-pan-small.gif
+
+- id: doi:10.1007/s00138-024-01643-y
+  image: https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs00138-024-01643-y/MediaObjects/138_2024_1643_Fig1_HTML.png?as=webp
+
+- id: doi:10.1109/BIBM62325.2024.10822398
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10821710/10821711/10822398/lu1-p6-lu-small.gif
+
+- id: doi:10.1109/BIBM62325.2024.10821994
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10821710/10821711/10821994/xu1-p6-xu-small.gif
+
+- id: doi:10.1109/BIBM62325.2024.10821814
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10821710/10821711/10821814/deng1-p8-deng-small.gif
+
+- id: doi:10.1109/BIBM62325.2024.10822506
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10821710/10821711/10822506/ye2-p8-ye-small.gif
+
+- id: doi:10.1109/BIBM62325.2024.10821851
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10821710/10821711/10821851/chen1-p6-chen-small.gif
+
+- id: doi:10.1145/3664647.3681140
+
+- id: doi:10.1007/978-3-031-72069-7_63
+  image: https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-031-72069-7_63/MediaObjects/631670_1_En_63_Fig1_HTML.png?as=webp
+
+- id: doi:10.48550/arXiv.2403.05141
+
+- id: doi:10.1007/978-981-96-0908-6_6
+  image: https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-981-96-0908-6_6/MediaObjects/645280_1_En_6_Fig1_HTML.png?as=webp
+  featured: true
+
+
+- id: doi:10.1109/WACV57701.2024.00354
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10483279/10483282/10483639/chen1-p10-chen-small.gif
+
+- id: doi:10.1109/BIBM58861.2023.10385819
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/10385250/10385251/10385819/zhang4-p8-zhang-small.gif
+
+- id: doi:10.1007/978-3-031-45087-7_17
+  image: https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-031-45087-7_17/MediaObjects/555097_1_En_17_Fig1_HTML.png?as=webp
+
+- id: doi:10.1016/j.media.2023.102917
+  image: https://ars.els-cdn.com/content/image/1-s2.0-S1361841523001779-gr1.jpg
+
+- id: doi:10.1007/978-3-031-43901-8_64
+  image: https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-031-43901-8_64/MediaObjects/554073_1_En_64_Fig1_HTML.png?as=webp
+
+- id: doi:10.1007/978-3-031-16452-1_23
+  image: https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-031-16452-1_23/MediaObjects/539251_1_En_23_Fig1_HTML.png?as=webp
+
+- id: doi:10.1109/ISBI52829.2022.9761693
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/9761376/9761399/9761693/joshi1-p5-joshi-small.gif
+
+- id: doi:10.48550/arXiv.2112.09135
+
+- id: doi:10.1007/978-3-030-87240-3_23
+  image: https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-030-87240-3_23/MediaObjects/521400_1_En_23_Fig1_HTML.png?as=webp
+
+- id: doi:10.48550/arXiv.2105.11361
+
+- id: doi:10.1109/ISBI48211.2021.9434168
+  image: https://ieeexplore.ieee.org/mediastore/IEEE/content/media/9433749/9433753/9434168/gandh1-0552-small.gif
+

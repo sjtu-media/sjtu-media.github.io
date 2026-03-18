@@ -9,11 +9,8 @@ nav:
 ---
 
 {% assign publications = site.data.citations | sort: "date" | reverse %}
-{% assign featured_publication = publications | first %}
-
-{% capture summary %}
-The publication page is driven by citation data generated from your ORCID, DOI, PubMed, and related sources.
-{% endcapture %}
+{% assign featured_candidates = site.data.citations | where: "featured", true %}
+{% assign featured_publication = featured_candidates | first | default: publications.first %}
 
 {% include page-intro.html eyebrow="Publication" title=page.title summary=summary %}
 
@@ -23,7 +20,6 @@ The publication page is driven by citation data generated from your ORCID, DOI, 
   <div class="page-section-head">
     <p class="page-section-head__eyebrow">Highlighted</p>
     <h2>Selected Publication</h2>
-    <p class="page-section-head__summary">Use the top slot for a recent or representative paper.</p>
   </div>
 
   {% include citation.html lookup=featured_publication.id style="rich" %}
@@ -33,7 +29,6 @@ The publication page is driven by citation data generated from your ORCID, DOI, 
 
 <div class="page-toolbar">
   <h2>Search Publications</h2>
-  <p class="page-note">Update `_data/sources.yaml`, `_data/orcid.yaml`, and related files to replace the sample records with your lab's real publication list.</p>
   {% include search-box.html %}
   {% include search-info.html %}
 </div>
