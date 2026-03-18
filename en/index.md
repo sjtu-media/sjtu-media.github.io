@@ -11,7 +11,7 @@ permalink: /en/
 {% assign recent_posts = site.posts | sort: "date" | reverse %}
 {% assign featured_post = recent_posts | first %}
 {% assign recent_publications = site.data.citations | sort: "date" | reverse | slice: 0, 3 %}
-{% assign preview_members = site.members | sort: "name" | slice: 0, 4 %}
+{% assign preview_members = site.members_en | sort: "name" | slice: 0, 4 %}
 {% assign hero_images = site.static_files | where_exp: "file", "file.path contains '/images/hero/'" | sort: "name" %}
 
 {% capture lead %}
@@ -56,7 +56,7 @@ The contact section is now one of the five primary site areas. Replace the place
     </div>
     <div class="landing-stats">
       <div class="landing-stat">
-        <span class="landing-stat__value">{{ site.members | size }}</span>
+        <span class="landing-stat__value">{{ site.members_en | size }}</span>
         <span class="landing-stat__label">People profiles</span>
       </div>
       <div class="landing-stat">

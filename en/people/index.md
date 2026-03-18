@@ -9,7 +9,7 @@ nav:
 ---
 
 {% capture summary %}
-The People page is driven by the `_members` collection. Replace the sample profiles with your lab's faculty, students, staff, visiting scholars, and alumni.
+The People page is driven by the `_members_en` collection. Replace the sample profiles with your lab's faculty, students, staff, visiting scholars, and alumni.
 {% endcapture %}
 
 {% include page-intro.html eyebrow="People" title=page.title summary=summary %}
@@ -21,7 +21,7 @@ The People page is driven by the `_members` collection. Replace the sample profi
   <h2>Principal Investigator</h2>
 </div>
 
-{% include list.html data="members" component="portrait" filter="role == 'principal-investigator'" %}
+{% include list.html data="members_en" component="portrait" filter="role == 'principal-investigator'" %}
 
 {% include section.html %}
 
@@ -30,7 +30,7 @@ The People page is driven by the `_members` collection. Replace the sample profi
   <h2>Students, Staff, and Researchers</h2>
 </div>
 
-{% include list.html data="members" component="portrait" filter="role != 'principal-investigator' and group != 'alum'" %}
+{% include list.html data="members_en" component="portrait" filter="role != 'principal-investigator' and group != 'alum'" %}
 
 {% include section.html %}
 
@@ -39,7 +39,7 @@ The People page is driven by the `_members` collection. Replace the sample profi
   <h2>Past Members</h2>
 </div>
 
-{% include list.html data="members" component="portrait" filter="group == 'alum'" style="small" %}
+{% include list.html data="members_en" component="portrait" filter="group == 'alum'" style="small" %}
 
 {% include section.html %}
 

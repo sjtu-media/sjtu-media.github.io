@@ -8,6 +8,13 @@
 {% endif %}
 
 {% assign type = site.data.types[member.role] %}
+{% assign member_lang = member.lang | default: page.lang | default: "en" %}
+{% assign role_description = type.description %}
+{% if member_lang == "zh" %}
+  {% assign role_description = type.description_zh | default: type.description %}
+{% elsif member_lang == "en" %}
+  {% assign role_description = type.description_en | default: type.description %}
+{% endif %}
 
 <div class="portrait-wrapper">
   <a
@@ -38,7 +45,7 @@
 
     {% if member.description or type %}
       <span class="portrait-description">
-        {{ member.description | default: type.description }}
+        {{ member.description | default: role_description }}
       </span>
     {% endif %}
 

@@ -26,6 +26,16 @@ defaults:
       type: "members"
     values:
       layout: member
+  # markdown files in /_members_zh
+  - scope:
+      type: "members_zh"
+    values:
+      layout: member
+  # markdown files in /_members_en
+  - scope:
+      type: "members_en"
+    values:
+      layout: member
   # markdown files in /_posts
   - scope:
       type: "posts"
@@ -36,6 +46,12 @@ collections:
   # generate page for each member
   members:
     output: true
+  members_zh:
+    output: true
+    permalink: /zh/people/:slug/
+  members_en:
+    output: true
+    permalink: /en/people/:slug/
   # generate page for each post
   posts:
     output: true

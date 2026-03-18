@@ -3,20 +3,40 @@ layout: default
 ---
 
 {% assign role = site.data.types[page.role] %}
-{% capture summary %}
-{{ page.description | default: role.description | default: page.affiliation }}
-{% endcapture %}
+{% assign page_lang = page.lang | default: "en" %}
+{% assign role_description = role.description %}
+{% if page_lang == "zh" %}
+  {% assign role_description = role.description_zh | default: role.description %}
+{% elsif page_lang == "en" %}
+  {% assign role_description = role.description_en | default: role.description %}
+{% endif %}
+{% assign people_eyebrow = "People" %}
+{% assign publication_label = "Publication" %}
+{% assign search_label = "Search for" %}
+{% assign papers_suffix = "'s papers on the Publication page" %}
+{% if page_lang == "zh" %}
+  {% assign people_eyebrow = "团队" %}
+  {% assign publication_label = "论文" %}
+  {% assign search_label = "在论文页面搜索" %}
+  {% assign papers_suffix = "的论文" %}
+{% endif %}
 
 {% include section.html %}
 
-{% include page-intro.html eyebrow="People" title=page.name summary=summary %}
+{% include page-intro.html eyebrow=people_eyebrow title=page.name %}
 
 <div class="page-profile">
   <aside class="page-panel page-profile__aside">
-    {% include portrait.html lookup=page.slug %}
-    {% if page.affiliation %}
-      <p class="page-note">{{ page.affiliation }}</p>
-    {% endif %}
+    {% include portrait.html
+      name=page.name
+      image=page.image
+      role=page.role
+      description=page.description
+      affiliation=page.affiliation
+      links=page.links
+      slug=page.slug
+      url=page.url
+    %}
     <div class="page-profile__links">
       {% for link in page.links %}
         {% assign key = link[0] %}
@@ -39,12 +59,16 @@ layout: default
 %}
 
 {% capture search -%}
-  publication/?search={% for alias in aliases %}"{{ alias }}" {% endfor %}
+  {{ page_lang }}/publication/?search={% for alias in aliases %}"{{ alias }}" {% endfor %}
 {%- endcapture %}
 
 <p class="center">
   <a href="{{ search | relative_url | uri_escape }}">
-    Search for {{ page.name | default: page.title }}'s papers on the Publication page
+    {% if page_lang == "zh" %}
+      {{ search_label }} {{ page.name | default: page.title }} {{ papers_suffix }}
+    {% else %}
+      {{ search_label }} {{ page.name | default: page.title }}{{ papers_suffix }}
+    {% endif %}
   </a>
 </p>
 

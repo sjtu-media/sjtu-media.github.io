@@ -5,26 +5,56 @@
 principal-investigator:
   icon: fa-solid fa-microscope
   description: Principal Investigator
+  description_zh: 课题组负责人
+  description_en: Principal Investigator
 
 postdoc:
   icon: fa-solid fa-glasses
   description: Postdoctoral Researcher
+  description_zh: 博士后研究员
+  description_en: Postdoctoral Researcher
 
 phd:
   icon: fa-solid fa-graduation-cap
   description: PhD Student
+  description_zh: 博士研究生
+  description_en: PhD Student
+
+master:
+  icon: fa-solid fa-user-graduate
+  description: Master's Student
+  description_zh: 硕士研究生
+  description_en: Master's Student
+
+research-assistant:
+  icon: fa-solid fa-flask
+  description: Research Assistant
+  description_zh: 科研助理
+  description_en: Research Assistant
+
+visiting-scholar:
+  icon: fa-solid fa-user-group
+  description: Visiting Scholar
+  description_zh: 访问学者
+  description_en: Visiting Scholar
 
 undergrad:
   icon: fa-solid fa-user-graduate
   description: Undergraduate Student
+  description_zh: 本科生
+  description_en: Undergraduate Student
 
 programmer:
   icon: fa-solid fa-code
   description: Programmer
+  description_zh: 工程师
+  description_en: Programmer
 
 mascot:
   icon: fa-solid fa-dog
   description: Mascot
+  description_zh: 吉祥物
+  description_en: Mascot
 
 # general
 
