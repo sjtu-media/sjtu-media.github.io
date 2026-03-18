@@ -31,13 +31,15 @@ Notes:
 
 ## Content Structure
 
+- `zh/` stores Chinese pages for the primary site sections.
+- `en/` stores English pages for the primary site sections.
 - `_members/` stores member profile pages.
 - `_data/` stores projects, citations, and data sources.
-- `research/`, `projects/`, `team/`, `blog/`, and `contact/` define the main site sections.
+- Legacy root-level section pages now redirect to the `zh/` routes.
 - `_posts/` stores blog posts.
 
 ## Next Customization Targets
 
 - Replace example members in `_members/`.
 - Replace example projects and citation sources in `_data/`.
-- Replace placeholder copy in `index.md`, `research/`, `projects/`, `team/`, `blog/`, and `contact/`.
+- Replace placeholder copy in `zh/` and `en/` for each primary section.

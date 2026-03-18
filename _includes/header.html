@@ -20,7 +20,29 @@
     data-big
   {% endif %}
 >
-  <a href="{{ "/" | relative_url }}" class="home">
+  {% assign page_lang = page.lang | default: "zh" %}
+  {% assign home_url = "/" | append: page_lang | append: "/" %}
+  {% assign current_url = page.url %}
+  {% assign pages = site.pages
+    | where: "lang", page_lang
+    | where_exp: "nav_page", "nav_page.nav"
+    | sort: "nav.order"
+  %}
+  {% assign alt_lang = "en" %}
+  {% if page_lang == "en" %}
+    {% assign alt_lang = "zh" %}
+  {% endif %}
+  {% assign alt_page = site.pages
+    | where: "lang_ref", page.lang_ref
+    | where: "lang", alt_lang
+    | first
+  %}
+  {% assign alt_url = "/" | append: alt_lang | append: "/" %}
+  {% if alt_page %}
+    {% assign alt_url = alt_page.url %}
+  {% endif %}
+
+  <a href="{{ home_url | relative_url }}" class="home">
     {% if logo %}
       <span class="logo logo-full">
         {% if svg %}
@@ -57,11 +79,6 @@
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
   <nav>
-    {% assign current_url = page.url %}
-    {% assign pages = site.pages
-      | where_exp: "nav_page", "nav_page.nav"
-      | sort: "nav.order"
-    %}
     {% for nav_page in pages %}
       {% if nav_page.nav %}
         <a
@@ -75,6 +92,24 @@
         </a>
       {% endif %}
     {% endfor %}
+
+    <a
+      class="lang-switch"
+      href="{{ alt_url | relative_url | uri_escape }}"
+      hreflang="{{ alt_lang }}"
+      lang="{{ alt_lang }}"
+      data-lang-current="{{ page_lang }}"
+    >
+      {% if page_lang == "zh" %}
+        中文
+        <span aria-hidden="true">/</span>
+        EN
+      {% else %}
+        ZH
+        <span aria-hidden="true">/</span>
+        English
+      {% endif %}
+    </a>
 
     <input
       type="checkbox"
