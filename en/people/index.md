@@ -8,10 +8,6 @@ nav:
   tooltip: Faculty, students, staff, and alumni
 ---
 
-{% capture summary %}
-The People page is driven by the `_members_en` collection. Replace the sample profiles with your lab's faculty, students, staff, visiting scholars, and alumni.
-{% endcapture %}
-
 {% include page-intro.html eyebrow="People" title=page.title summary=summary %}
 
 {% include section.html %}

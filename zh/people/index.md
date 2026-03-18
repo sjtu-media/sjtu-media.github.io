@@ -8,10 +8,6 @@ nav:
   tooltip: Faculty, students, staff, and alumni
 ---
 
-{% capture summary %}
-People 页面由 `_members_zh` collection 驱动。请用实验室真实的教师、学生、职员、访问学者和校友资料替换示例内容。
-{% endcapture %}
-
 {% include page-intro.html eyebrow="团队" title=page.title summary=summary %}
 
 {% include section.html %}
