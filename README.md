@@ -1,3 +1,5 @@
+Visit **[sjtu-media.github.io](https://sjtu-media.github.io)** 🚀
+
 # SJTU MedIA
 
 This repository now uses the Greene Lab website template as the base for a full lab website, with local preview via Docker Compose.
