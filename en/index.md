@@ -12,7 +12,13 @@ permalink: /en/
 {% assign featured_post = recent_posts | first %}
 {% assign recent_publications = site.data.citations | sort: "date" | reverse | slice: 0, 3 %}
 {% assign preview_members = site.members_en | sort: "name" | slice: 0, 4 %}
-{% assign hero_images = site.static_files | where_exp: "file", "file.path contains '/images/hero/'" | sort: "name" %}
+{% assign hero_images = "" | split: "," %}
+{% for file in site.static_files %}
+  {% if file.path contains '/images/hero/' %}
+    {% assign hero_images = hero_images | push: file %}
+  {% endif %}
+{% endfor %}
+{% assign hero_images = hero_images | sort: "name" %}
 
 {% capture lead %}
 SJTU MedIA is based in the [AGI Institute](https://www.cs.sjtu.edu.cn/yjjg/813.html) of the School of Computer Science at Shanghai Jiao Tong University, with research spanning biomedical image analysis, multimodal medical foundation models, and intelligent diagnosis.  

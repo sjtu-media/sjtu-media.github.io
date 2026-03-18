@@ -26,7 +26,6 @@
   {% assign current_url = page.url %}
   {% assign pages = site.pages
     | where: "lang", page_lang
-    | where_exp: "nav_page", "nav_page.nav"
     | sort: "nav.order"
   %}
   {% assign alt_lang = "en" %}

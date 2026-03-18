@@ -12,7 +12,13 @@ permalink: /zh/
 {% assign featured_post = recent_posts | first %}
 {% assign recent_publications = site.data.citations | sort: "date" | reverse | slice: 0, 3 %}
 {% assign preview_members = site.members_zh | sort: "name" | slice: 0, 4 %}
-{% assign hero_images = site.static_files | where_exp: "file", "file.path contains '/images/hero/'" | sort: "name" %}
+{% assign hero_images = "" | split: "," %}
+{% for file in site.static_files %}
+  {% if file.path contains '/images/hero/' %}
+    {% assign hero_images = hero_images | push: file %}
+  {% endif %}
+{% endfor %}
+{% assign hero_images = hero_images | sort: "name" %}
 
 {% capture lead %}
 上海交通大学 MedIA 实验室，从属于上海交通大学计算机学院[通用人工智能研究所](https://www.cs.sjtu.edu.cn/yjjg/813.html)（AGI Institute），致力于生物医学图像处理、多模态医学基础模型与智能诊断。  

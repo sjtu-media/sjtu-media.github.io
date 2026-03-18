@@ -1,8 +1,11 @@
 {% if include.lookup %}
-  {% assign member = site.members 
-    | where_exp: "member", "member.slug == include.lookup"
-    | first
-  %}
+  {% assign member = nil %}
+  {% for candidate in site.members %}
+    {% if candidate.slug == include.lookup %}
+      {% assign member = candidate %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
 {% else %}
   {% assign member = include %}
 {% endif %}

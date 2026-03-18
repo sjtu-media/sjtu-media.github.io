@@ -1,9 +1,12 @@
 {% if include.lookup %}
-  {% assign post = site.posts 
-    | where_exp: "post", "post.slug == include.lookup"
-    | first
-    | default: include
-  %}
+  {% assign post = nil %}
+  {% for candidate in site.posts %}
+    {% if candidate.slug == include.lookup %}
+      {% assign post = candidate %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% assign post = post | default: include %}
 {% else %}
   {% assign post = include %}
 {% endif %}
