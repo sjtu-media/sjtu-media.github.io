@@ -1,0 +1,35 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 14px;
+  padding: 36px 24px 44px;
+  color: var(--chrome-text);
+  line-height: var(--spacing);
+  border-top: 1px solid var(--chrome-border);
+  box-shadow: none;
+  text-align: center;
+}
+
+footer.background {
+  background: linear-gradient(90deg, var(--chrome-start) 0%, var(--chrome-end) 100%);
+}
+
+footer.background:before {
+  opacity: 0;
+}
+
+footer a {
+  color: var(--chrome-text-muted) !important;
+}
+
+footer a:hover {
+  color: var(--chrome-text) !important;
+}
+
+footer .icon {
+  font-size: var(--xl);
+}
+
+/*# sourceMappingURL=footer.css.map */
