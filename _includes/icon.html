@@ -1,9 +1,8 @@
 {%- if include.icon contains ".svg" -%}
-  {%- capture inline -%}
-    {%- include {{ include.icon }} -%}
-  {%- endcapture -%}
   <span class="icon">
-    {{- inline | strip_newlines -}}
+    {%- if include.icon == "manubot.svg" -%}
+      {%- include manubot.svg -%}
+    {%- endif -%}
   </span>
 {%- elsif include.icon and include.icon != "" -%}
   <i class="icon {{ include.icon }}"></i>
