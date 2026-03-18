@@ -8,18 +8,17 @@ nav:
   tooltip: Faculty, students, staff, and alumni
 ---
 
-{% assign t = site.data.i18n[page.lang] %}
 {% capture summary %}
-{{ t.pages.people.summary }}
+People 页面由 `_members` collection 驱动。请用实验室真实的教师、学生、职员、访问学者和校友资料替换示例内容。
 {% endcapture %}
 
-{% include page-intro.html eyebrow=t.pages.people.eyebrow title=t.pages.people.title summary=summary %}
+{% include page-intro.html eyebrow="团队" title=page.title summary=summary %}
 
 {% include section.html %}
 
 <div class="page-section-head">
-  <p class="page-section-head__eyebrow">{{ t.pages.people.leadership_eyebrow }}</p>
-  <h2>{{ t.pages.people.leadership_title }}</h2>
+  <p class="page-section-head__eyebrow">负责人</p>
+  <h2>课题组负责人</h2>
 </div>
 
 {% include list.html data="members" component="portrait" filter="role == 'principal-investigator'" %}
@@ -27,8 +26,8 @@ nav:
 {% include section.html %}
 
 <div class="page-section-head">
-  <p class="page-section-head__eyebrow">{{ t.pages.people.current_eyebrow }}</p>
-  <h2>{{ t.pages.people.current_title }}</h2>
+  <p class="page-section-head__eyebrow">当前成员</p>
+  <h2>学生、职员与研究人员</h2>
 </div>
 
 {% include list.html data="members" component="portrait" filter="role != 'principal-investigator' and group != 'alum'" %}
@@ -36,8 +35,8 @@ nav:
 {% include section.html %}
 
 <div class="page-section-head">
-  <p class="page-section-head__eyebrow">{{ t.pages.people.alumni_eyebrow }}</p>
-  <h2>{{ t.pages.people.alumni_title }}</h2>
+  <p class="page-section-head__eyebrow">校友</p>
+  <h2>历届成员</h2>
 </div>
 
 {% include list.html data="members" component="portrait" filter="group == 'alum'" style="small" %}
@@ -45,6 +44,6 @@ nav:
 {% include section.html %}
 
 <div class="page-panel">
-  <h2>{{ t.pages.people.culture_title }}</h2>
-  <p>{{ t.pages.people.culture_body }}</p>
+  <h2>招生与团队文化</h2>
+  <p>这里可以写团队文化、指导方式、开放岗位或合作重点的简短说明。</p>
 </div>

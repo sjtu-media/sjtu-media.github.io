@@ -10,21 +10,20 @@ nav:
 
 {% assign publications = site.data.citations | sort: "date" | reverse %}
 {% assign featured_publication = publications | first %}
-{% assign t = site.data.i18n[page.lang] %}
 
 {% capture summary %}
-{{ t.pages.publication.summary }}
+The publication page is driven by citation data generated from your ORCID, DOI, PubMed, and related sources.
 {% endcapture %}
 
-{% include page-intro.html eyebrow=t.pages.publication.eyebrow title=t.pages.publication.title summary=summary %}
+{% include page-intro.html eyebrow="Publication" title=page.title summary=summary %}
 
 {% if featured_publication %}
   {% include section.html %}
 
   <div class="page-section-head">
-    <p class="page-section-head__eyebrow">{{ t.pages.publication.highlighted_eyebrow }}</p>
-    <h2>{{ t.pages.publication.highlighted_title }}</h2>
-    <p class="page-section-head__summary">{{ t.pages.publication.highlighted_summary }}</p>
+    <p class="page-section-head__eyebrow">Highlighted</p>
+    <h2>Selected Publication</h2>
+    <p class="page-section-head__summary">Use the top slot for a recent or representative paper.</p>
   </div>
 
   {% include citation.html lookup=featured_publication.id style="rich" %}
@@ -33,8 +32,8 @@ nav:
 {% include section.html %}
 
 <div class="page-toolbar">
-  <h2>{{ t.pages.publication.search_title }}</h2>
-  <p class="page-note">{{ t.pages.publication.search_note }}</p>
+  <h2>Search Publications</h2>
+  <p class="page-note">Update `_data/sources.yaml`, `_data/orcid.yaml`, and related files to replace the sample records with your lab's real publication list.</p>
   {% include search-box.html %}
   {% include search-info.html %}
 </div>
