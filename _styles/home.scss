@@ -11,6 +11,22 @@
   margin: 0;
 }
 
+.landing-lead > :first-child,
+.landing-body > :first-child,
+.landing-hero__caption > :first-child,
+.landing-section-head > div > :first-child,
+.landing-cta > div > div > :first-child {
+  margin-top: 0;
+}
+
+.landing-lead > :last-child,
+.landing-body > :last-child,
+.landing-hero__caption > :last-child,
+.landing-section-head > div > :last-child,
+.landing-cta > div > div > :last-child {
+  margin-bottom: 0;
+}
+
 .landing-kicker {
   color: var(--primary);
   font-family: var(--heading);
@@ -88,12 +104,81 @@
   gap: 12px;
 }
 
-.landing-hero__media img {
+.landing-hero__gallery {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  background: linear-gradient(180deg, var(--background-alt), var(--background));
+}
+
+.landing-hero__media img,
+.landing-hero__fallback,
+.landing-hero__slide {
   width: 100%;
   min-height: 360px;
   object-fit: cover;
+}
+
+.landing-hero__fallback {
   border-radius: 28px;
   box-shadow: var(--shadow);
+}
+
+.landing-hero__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.landing-hero__slide[data-active] {
+  opacity: 1;
+}
+
+.landing-hero__controls {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.landing-hero__nav {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(15, 110, 168, 0.12);
+  border-radius: 999px;
+  background: var(--background);
+  box-shadow: var(--shadow);
+  color: var(--primary);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.landing-hero__nav:hover {
+  background: var(--background-alt);
+}
+
+.landing-hero__dots {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.landing-hero__dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(15, 110, 168, 0.24);
+}
+
+.landing-hero__dot[data-active] {
+  width: 28px;
+  background: var(--primary);
 }
 
 .landing-hero__caption {

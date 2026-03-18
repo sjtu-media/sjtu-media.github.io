@@ -12,18 +12,43 @@ permalink: /en/
 {% assign featured_post = recent_posts | first %}
 {% assign recent_publications = site.data.citations | sort: "date" | reverse | slice: 0, 3 %}
 {% assign preview_members = site.members | sort: "name" | slice: 0, 4 %}
+{% assign hero_images = site.static_files | where_exp: "file", "file.path contains '/images/hero/'" | sort: "name" %}
+
+{% capture lead %}
+SJTU MedIA is based in the [AGI Institute](https://www.cs.sjtu.edu.cn/yjjg/813.html) of the School of Computer Science at Shanghai Jiao Tong University, with research spanning biomedical image analysis, multimodal medical foundation models, and intelligent diagnosis.  
+The lab is led by Associate Professor [Yi Hong](https://www.cs.sjtu.edu.cn/jiaoshiml/hongyi.html).
+{% endcapture %}
+
+{% capture sections_intro %}
+Each major part of the site follows the same visual language so visitors can move between updates, research, publications, people, and contact information without a style break.
+{% endcapture %}
+
+{% capture updates_intro %}
+Recent posts are highlighted prominently, with enough space for one featured update and quick follow-on items.
+{% endcapture %}
+
+{% capture research_intro %}
+Research content and featured projects now live under the same top-level section rather than a separate Projects tab.
+{% endcapture %}
+
+{% capture publication_intro %}
+The publication section remains data-driven and searchable, but now sits as its own first-class page in the navigation.
+{% endcapture %}
+
+{% capture people_intro %}
+Team members are surfaced directly from the members collection so the homepage stays aligned with the People page.
+{% endcapture %}
+
+{% capture contact_intro %}
+The contact section is now one of the five primary site areas. Replace the placeholder details with your official lab email, office location, and collaboration or recruiting information.
+{% endcapture %}
 
 <div class="landing-hero">
   <div class="landing-hero__copy">
-    <p class="landing-kicker">Shanghai Jiao Tong University</p>
     <h1>{{ site.title }}</h1>
-    <p class="landing-lead">
-      {{ site.description }}
-      The homepage is now organized around the five primary sections of the site: News, Research, Publication, People, and Contact.
-    </p>
-    <p class="landing-body">
-      Replace the current sample members, projects, and citation sources with your lab's real records to turn this scaffold into the production website.
-    </p>
+    <div class="landing-lead">
+      {{ lead | markdownify }}
+    </div>
     <div class="landing-actions">
       {% include button.html link="/en/research/" text="Explore research" icon="fa-solid fa-arrow-right" flip=true %}
       {% include button.html link="/en/publication/" text="View publications" icon="fa-solid fa-book-open" %}
@@ -44,9 +69,53 @@ permalink: /en/
       </div>
     </div>
   </div>
-  <div class="landing-hero__media">
-    <img src="{{ 'images/background.jpg' | relative_url }}" alt="Laboratory visual placeholder">
-    <p class="landing-hero__caption">Replace this placeholder with a recent lab photo, microscopy panel, or visual summary of your work.</p>
+  <div
+    class="landing-hero__media"
+    {% if hero_images.size > 1 %}
+      data-hero-gallery
+      data-interval="5000"
+    {% endif %}
+  >
+    {% if hero_images.size > 0 %}
+      <div class="landing-hero__gallery">
+        {% for hero_image in hero_images %}
+          <img
+            src="{{ hero_image.path | relative_url }}"
+            alt="Homepage gallery image {{ forloop.index }}"
+            class="landing-hero__slide"
+            {% if forloop.first %}
+              data-active
+            {% endif %}
+            loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+          >
+        {% endfor %}
+      </div>
+      {% if hero_images.size > 1 %}
+        <div class="landing-hero__controls" aria-label="Homepage image controls">
+          <button type="button" class="landing-hero__nav" data-hero-prev aria-label="Previous image">
+            <span aria-hidden="true">‹</span>
+          </button>
+          <div class="landing-hero__dots" role="tablist" aria-label="Homepage image pagination">
+            {% for hero_image in hero_images %}
+              <button
+                type="button"
+                class="landing-hero__dot"
+                data-hero-dot="{{ forloop.index0 }}"
+                aria-label="Go to image {{ forloop.index }}"
+                {% if forloop.first %}
+                  data-active
+                {% endif %}
+              ></button>
+            {% endfor %}
+          </div>
+          <button type="button" class="landing-hero__nav" data-hero-next aria-label="Next image">
+            <span aria-hidden="true">›</span>
+          </button>
+        </div>
+      {% endif %}
+    {% else %}
+      <img src="{{ 'images/background.jpg' | relative_url }}" alt="Laboratory visual placeholder" class="landing-hero__fallback">
+    {% endif %}
   </div>
 </div>
 
@@ -55,7 +124,7 @@ permalink: /en/
 <div class="landing-section-head">
   <p class="landing-kicker">Site Sections</p>
   <h2>Navigate the Lab Website</h2>
-  <p>Each major part of the site follows the same visual language so visitors can move between updates, research, publications, people, and contact information without a style break.</p>
+  <div>{{ sections_intro | markdownify }}</div>
 </div>
 
 <div class="section-card-grid">
@@ -96,7 +165,7 @@ permalink: /en/
 <div class="landing-section-head">
   <p class="landing-kicker">Updates</p>
   <h2>Latest News</h2>
-  <p>Recent posts are highlighted prominently, with enough space for one featured update and quick follow-on items.</p>
+  <div>{{ updates_intro | markdownify }}</div>
 </div>
 
 <div class="news-layout">
@@ -129,7 +198,7 @@ permalink: /en/
 <div class="landing-section-head">
   <p class="landing-kicker">Research</p>
   <h2>Research Directions</h2>
-  <p>Research content and featured projects now live under the same top-level section rather than a separate Projects tab.</p>
+  <div>{{ research_intro | markdownify }}</div>
 </div>
 
 <div class="card-grid">
@@ -153,7 +222,7 @@ permalink: /en/
 <div class="landing-section-head">
   <p class="landing-kicker">Publication</p>
   <h2>Latest Publications</h2>
-  <p>The publication section remains data-driven and searchable, but now sits as its own first-class page in the navigation.</p>
+  <div>{{ publication_intro | markdownify }}</div>
 </div>
 
 <div class="card-grid">
@@ -176,7 +245,7 @@ permalink: /en/
 <div class="landing-section-head">
   <p class="landing-kicker">People</p>
   <h2>People Snapshot</h2>
-  <p>Team members are surfaced directly from the members collection so the homepage stays aligned with the People page.</p>
+  <div>{{ people_intro | markdownify }}</div>
 </div>
 
 <div class="people-preview">
@@ -191,7 +260,7 @@ permalink: /en/
   <div>
     <p class="landing-kicker">Contact</p>
     <h2>Make it easy to reach the lab</h2>
-    <p>The contact section is now one of the five primary site areas. Replace the placeholder details with your official lab email, office location, and collaboration or recruiting information.</p>
+    <div>{{ contact_intro | markdownify }}</div>
   </div>
   <div class="landing-cta__actions">
     {% include button.html link="/en/contact/" text="Open contact page" icon="fa-solid fa-arrow-right" flip=true %}

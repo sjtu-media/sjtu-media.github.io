@@ -12,18 +12,43 @@ permalink: /zh/
 {% assign featured_post = recent_posts | first %}
 {% assign recent_publications = site.data.citations | sort: "date" | reverse | slice: 0, 3 %}
 {% assign preview_members = site.members | sort: "name" | slice: 0, 4 %}
+{% assign hero_images = site.static_files | where_exp: "file", "file.path contains '/images/hero/'" | sort: "name" %}
+
+{% capture lead %}
+上海交通大学 MedIA 实验室，从属于上海交通大学计算机学院[通用人工智能研究所](https://www.cs.sjtu.edu.cn/yjjg/813.html)（AGI Institute），致力于生物医学图像处理、多模态医学基础模型与智能诊断。  
+实验室由 [洪义](https://www.cs.sjtu.edu.cn/jiaoshiml/hongyi.html) 副教授领导。
+{% endcapture %}
+
+{% capture sections_intro %}
+各个一级页面保持统一的视觉语言，访问者可以自然地在动态、研究、论文、团队与联系信息之间切换。
+{% endcapture %}
+
+{% capture updates_intro %}
+突出展示最近更新，并为后续动态保留足够的浏览空间。
+{% endcapture %}
+
+{% capture research_intro %}
+研究内容与重点项目现在统一归入顶层 Research 页面，而不再单独拆出 Projects 栏。
+{% endcapture %}
+
+{% capture publication_intro %}
+论文页面继续保持数据驱动和可搜索，但现在作为一级导航独立存在。
+{% endcapture %}
+
+{% capture people_intro %}
+首页的成员预览直接从 members collection 读取，因此会与 People 页面保持一致。
+{% endcapture %}
+
+{% capture contact_intro %}
+Contact 现已成为五个一级栏目之一。请将占位内容替换为正式邮箱、办公地点以及合作或招生信息。
+{% endcapture %}
 
 <div class="landing-hero">
   <div class="landing-hero__copy">
-    <p class="landing-kicker">上海交通大学</p>
     <h1>{{ site.title }}</h1>
-    <p class="landing-lead">
-      {{ site.description }}
-      首页围绕站点五个核心栏目组织：新闻、研究、论文、团队与联系。
-    </p>
-    <p class="landing-body">
-      用实验室真实的成员、项目和论文数据替换示例内容，即可把当前骨架站点投入正式使用。
-    </p>
+    <div class="landing-lead">
+      {{ lead | markdownify }}
+    </div>
     <div class="landing-actions">
       {% include button.html link="/zh/research/" text="浏览研究" icon="fa-solid fa-arrow-right" flip=true %}
       {% include button.html link="/zh/publication/" text="查看论文" icon="fa-solid fa-book-open" %}
@@ -44,9 +69,53 @@ permalink: /zh/
       </div>
     </div>
   </div>
-  <div class="landing-hero__media">
-    <img src="{{ 'images/background.jpg' | relative_url }}" alt="实验室视觉占位图">
-    <p class="landing-hero__caption">将这里替换为近期团队合影、显微图像拼图或研究工作的视觉摘要。</p>
+  <div
+    class="landing-hero__media"
+    {% if hero_images.size > 1 %}
+      data-hero-gallery
+      data-interval="5000"
+    {% endif %}
+  >
+    {% if hero_images.size > 0 %}
+      <div class="landing-hero__gallery">
+        {% for hero_image in hero_images %}
+          <img
+            src="{{ hero_image.path | relative_url }}"
+            alt="实验室首页轮播图 {{ forloop.index }}"
+            class="landing-hero__slide"
+            {% if forloop.first %}
+              data-active
+            {% endif %}
+            loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+          >
+        {% endfor %}
+      </div>
+      {% if hero_images.size > 1 %}
+        <div class="landing-hero__controls" aria-label="首页图片切换">
+          <button type="button" class="landing-hero__nav" data-hero-prev aria-label="上一张图片">
+            <span aria-hidden="true">‹</span>
+          </button>
+          <div class="landing-hero__dots" role="tablist" aria-label="首页图片分页">
+            {% for hero_image in hero_images %}
+              <button
+                type="button"
+                class="landing-hero__dot"
+                data-hero-dot="{{ forloop.index0 }}"
+                aria-label="切换到第 {{ forloop.index }} 张图片"
+                {% if forloop.first %}
+                  data-active
+                {% endif %}
+              ></button>
+            {% endfor %}
+          </div>
+          <button type="button" class="landing-hero__nav" data-hero-next aria-label="下一张图片">
+            <span aria-hidden="true">›</span>
+          </button>
+        </div>
+      {% endif %}
+    {% else %}
+      <img src="{{ 'images/background.jpg' | relative_url }}" alt="实验室视觉占位图" class="landing-hero__fallback">
+    {% endif %}
   </div>
 </div>
 
@@ -55,7 +124,7 @@ permalink: /zh/
 <div class="landing-section-head">
   <p class="landing-kicker">栏目概览</p>
   <h2>浏览实验室网站</h2>
-  <p>各个一级页面保持统一的视觉语言，访问者可以自然地在动态、研究、论文、团队与联系信息之间切换。</p>
+  <div>{{ sections_intro | markdownify }}</div>
 </div>
 
 <div class="section-card-grid">
@@ -96,7 +165,7 @@ permalink: /zh/
 <div class="landing-section-head">
   <p class="landing-kicker">最新动态</p>
   <h2>最新新闻</h2>
-  <p>突出展示最近更新，并为后续动态保留足够的浏览空间。</p>
+  <div>{{ updates_intro | markdownify }}</div>
 </div>
 
 <div class="news-layout">
@@ -129,7 +198,7 @@ permalink: /zh/
 <div class="landing-section-head">
   <p class="landing-kicker">研究</p>
   <h2>研究方向</h2>
-  <p>研究内容与重点项目现在统一归入顶层 Research 页面，而不再单独拆出 Projects 栏。</p>
+  <div>{{ research_intro | markdownify }}</div>
 </div>
 
 <div class="card-grid">
@@ -153,7 +222,7 @@ permalink: /zh/
 <div class="landing-section-head">
   <p class="landing-kicker">论文</p>
   <h2>最新论文</h2>
-  <p>论文页面继续保持数据驱动和可搜索，但现在作为一级导航独立存在。</p>
+  <div>{{ publication_intro | markdownify }}</div>
 </div>
 
 <div class="card-grid">
@@ -176,7 +245,7 @@ permalink: /zh/
 <div class="landing-section-head">
   <p class="landing-kicker">团队</p>
   <h2>团队概览</h2>
-  <p>首页的成员预览直接从 members collection 读取，因此会与 People 页面保持一致。</p>
+  <div>{{ people_intro | markdownify }}</div>
 </div>
 
 <div class="people-preview">
@@ -191,7 +260,7 @@ permalink: /zh/
   <div>
     <p class="landing-kicker">联系</p>
     <h2>让访问者更容易联系实验室</h2>
-    <p>Contact 现已成为五个一级栏目之一。请将占位内容替换为正式邮箱、办公地点以及合作或招生信息。</p>
+    <div>{{ contact_intro | markdownify }}</div>
   </div>
   <div class="landing-cta__actions">
     {% include button.html link="/zh/contact/" text="打开联系页面" icon="fa-solid fa-arrow-right" flip=true %}
