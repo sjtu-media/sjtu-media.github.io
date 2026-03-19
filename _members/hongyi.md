@@ -2,7 +2,7 @@
 name:
   zh: 洪义
   en: Yi HONG
-image: https://www.cs.sjtu.edu.cn/upload/image/jiaoshiml/%E6%B4%AA%E4%B9%89.jpg
+image: images/members/hongyi.jpg
 role: principal-investigator
 research:
   zh: 医学图像分析
