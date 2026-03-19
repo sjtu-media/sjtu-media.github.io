@@ -57,12 +57,8 @@ Contact 现已成为五个一级栏目之一。请将占位内容替换为正式
         <span class="landing-stat__label">当前成员</span>
       </div>
       <div class="landing-stat">
-        <span class="landing-stat__value">{{ featured_projects | size }}</span>
-        <span class="landing-stat__label">重点项目</span>
-      </div>
-      <div class="landing-stat">
         <span class="landing-stat__value">{{ site.data.citations | size }}</span>
-        <span class="landing-stat__label">论文记录</span>
+        <span class="landing-stat__label">论文</span>
       </div>
     </div>
   </div>

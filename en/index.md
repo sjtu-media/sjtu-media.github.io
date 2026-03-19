@@ -46,12 +46,8 @@ Research content and featured projects now live under the same top-level section
         <span class="landing-stat__label">Current members</span>
       </div>
       <div class="landing-stat">
-        <span class="landing-stat__value">{{ featured_projects | size }}</span>
-        <span class="landing-stat__label">Featured projects</span>
-      </div>
-      <div class="landing-stat">
         <span class="landing-stat__value">{{ site.data.citations | size }}</span>
-        <span class="landing-stat__label">Publication records</span>
+        <span class="landing-stat__label">Publication</span>
       </div>
     </div>
   </div>
