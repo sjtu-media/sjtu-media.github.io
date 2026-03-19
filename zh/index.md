@@ -11,7 +11,8 @@ permalink: /zh/
 {% assign recent_posts = site.posts | sort: "date" | reverse %}
 {% assign featured_post = recent_posts | first %}
 {% assign recent_publications = site.data.citations | sort: "date" | reverse | slice: 0, 3 %}
-{% assign preview_members = site.members_zh | sort: "name" | slice: 0, 4 %}
+{% assign current_members = site.members_zh | where_exp: "member", "member.group != 'alum'" %}
+{% assign preview_members = current_members | sort: "name" | slice: 0, 4 %}
 {% assign hero_images = "" | split: "," %}
 {% for file in site.static_files %}
   {% if file.path contains '/images/hero/' %}
@@ -22,7 +23,6 @@ permalink: /zh/
 
 {% capture lead %}
 上海交通大学 MedIA 实验室，从属于上海交通大学计算机学院[通用人工智能研究所](https://www.cs.sjtu.edu.cn/yjjg/813.html)（AGI Institute），致力于生物医学图像处理、多模态医学基础模型与智能诊断。  
-实验室由 [洪义](https://www.cs.sjtu.edu.cn/jiaoshiml/hongyi.html) 副教授领导。
 {% endcapture %}
 
 {% capture sections_intro %}
@@ -42,7 +42,7 @@ permalink: /zh/
 {% endcapture %}
 
 {% capture people_intro %}
-首页的成员预览直接从 members collection 读取，因此会与 People 页面保持一致。
+首页的成员预览与人数统计只包含当前成员，因此会与 People 页面中的“当前成员”分组保持一致。
 {% endcapture %}
 
 {% capture contact_intro %}
@@ -62,8 +62,8 @@ Contact 现已成为五个一级栏目之一。请将占位内容替换为正式
     </div>
     <div class="landing-stats">
       <div class="landing-stat">
-        <span class="landing-stat__value">{{ site.members_zh | size }}</span>
-        <span class="landing-stat__label">人员主页</span>
+        <span class="landing-stat__value">{{ current_members | size }}</span>
+        <span class="landing-stat__label">当前成员</span>
       </div>
       <div class="landing-stat">
         <span class="landing-stat__value">{{ site.posts | size }}</span>
