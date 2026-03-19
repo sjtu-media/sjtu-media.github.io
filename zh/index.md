@@ -160,7 +160,7 @@ Contact 现已成为五个一级栏目之一。请将占位内容替换为正式
       <p class="news-meta">{{ paper.date | date: "%Y" }} · {{ paper.publisher }}</p>
       <h3>{{ paper.title }}</h3>
       <p class="paper-authors">{{ author_list }}</p>
-      <a class="paper-link" href="{{ '/zh/publication/' | relative_url }}">浏览论文 <span aria-hidden="true">→</span></a>
+      <a class="paper-link" href="{{ paper.link | relative_url | uri_escape }}">浏览论文 <span aria-hidden="true">→</span></a>
     </article>
   {% endfor %}
 </div>
