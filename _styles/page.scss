@@ -112,9 +112,14 @@
   text-align: center;
 }
 
-.page-profile__aside .portrait {
-  width: min(220px, 100%);
+.page-profile__aside .portrait-wrapper {
   margin: 0;
+  width: min(220px, 100%);
+  max-width: 100%;
+}
+
+.page-profile__aside .portrait {
+  width: 100%;
 }
 
 .page-profile__links {

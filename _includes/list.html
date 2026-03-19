@@ -106,8 +106,14 @@
         last_modified_at=d.last_modified_at
         link=d.link
         lookup=d.lookup
+        lang=d.lang
         name=d.name
+        group=d.group
+        links=d.links
         publisher=d.publisher
+        research=d.research
+        research_interest=d.research_interest
+        research_interests=d.research_interests
         repo=d.repo
         role=d.role
         slug=d.slug
@@ -120,6 +126,7 @@
         type=d.type
         url=d.url
         width=d.width
+        direction=d.direction
       %}
     {% elsif include.component == "post-excerpt" %}
       {% include post-excerpt.html

@@ -2,14 +2,8 @@
 ---
 
 .portrait-wrapper {
-  display: contents;
-}
-
-.portrait {
   position: relative;
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   margin: 20px;
   width: 210px;
@@ -19,17 +13,28 @@
   border-radius: 24px;
   background: linear-gradient(180deg, var(--background), var(--background-alt));
   box-shadow: var(--shadow);
-  text-decoration: none;
+  text-align: center;
 }
 
-.portrait[data-style="small"] {
+.portrait {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.portrait-wrapper[data-style="small"] {
   width: 150px;
 }
 
-.portrait[data-style="tiny"] {
+.portrait-wrapper[data-style="tiny"] {
   flex-direction: row;
+  align-items: center;
   gap: 15px;
   width: unset;
+  max-width: 100%;
   padding: 0;
   border: none;
   border-radius: 0;
@@ -53,12 +58,12 @@
   transform: translate(14%, 14%);
 }
 
-.portrait[data-style="small"] .icon {
+.portrait-wrapper[data-style="small"] .icon {
   left: -2px;
   top: -2px;
 }
 
-.portrait[data-style="tiny"] .icon {
+.portrait-wrapper[data-style="tiny"] .icon {
   display: none;
 }
 
@@ -71,11 +76,11 @@
   box-shadow: var(--shadow);
 }
 
-.portrait[data-style="small"] .portrait-image {
+.portrait-wrapper[data-style="small"] .portrait-image {
   width: 90px;
 }
 
-.portrait[data-style="tiny"] .portrait-image {
+.portrait-wrapper[data-style="tiny"] .portrait-image {
   width: 50px;
   margin: 0;
 }
@@ -83,17 +88,45 @@
 .portrait-name {
   font-family: var(--heading);
   font-weight: var(--semi-bold);
+  font-size: 1.2rem;
+  line-height: 1.35;
 }
 
 .portrait-description,
+.portrait-research,
 .portrait-affiliation {
   color: var(--gray);
   text-align: center;
 }
 
-.portrait[data-style="tiny"] {
+.portrait-research__label {
+  color: var(--text);
+  font-weight: var(--semi-bold);
+}
+
+.portrait-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(15, 110, 168, 0.08);
+}
+
+.portrait-links .button {
+  margin: 0;
+  box-shadow: none;
+}
+
+.portrait-wrapper[data-style="tiny"] {
   .portrait-description,
+  .portrait-research,
   .portrait-affiliation {
+    display: none;
+  }
+
+  .portrait-links {
     display: none;
   }
 }

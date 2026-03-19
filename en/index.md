@@ -11,8 +11,8 @@ permalink: /en/
 {% assign recent_posts = site.posts | sort: "date" | reverse %}
 {% assign featured_post = recent_posts | first %}
 {% assign recent_publications = site.data.citations | sort: "date" | reverse | slice: 0, 3 %}
-{% assign current_members = site.members_en | where_exp: "member", "member.group != 'alum'" %}
-{% assign preview_members = current_members | sort: "name" | slice: 0, 4 %}
+{% assign current_members = site.members | where_exp: "member", "member.group != 'alum'" %}
+{% assign preview_members = current_members | sort: "slug" | slice: 0, 4 %}
 {% assign hero_images = "" | split: "," %}
 {% for file in site.static_files %}
   {% if file.path contains '/images/hero/' %}
