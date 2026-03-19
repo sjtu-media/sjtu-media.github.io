@@ -8,7 +8,6 @@ permalink: /en/
 {% include section.html size="wide" %}
 
 {% assign featured_projects = site.data.projects | where: "group", "featured" %}
-{% assign homepage_news = site.data.news | sort: "date" | reverse | slice: 0, 10 %}
 {% assign recent_publications = site.data.citations | sort: "date" | reverse | slice: 0, 3 %}
 {% assign current_members = site.members | where_exp: "member", "member.group != 'alum'" %}
 {% assign preview_members = current_members | sort: "slug" | slice: 0, 4 %}
@@ -109,24 +108,7 @@ Research content and featured projects now live under the same top-level section
   <h2>Lab Updates</h2>
 </div>
 
-<div class="news-stream">
-  {% for item in homepage_news %}
-    {% assign item_content = item.content.en | default: item.content %}
-    <article class="news-entry">
-      <div class="news-entry__meta">
-        <time class="news-entry__date" datetime="{{ item.date | date: '%Y-%m-%d' }}">
-          {{ item.date | date: "%b %-d, %Y" }}
-        </time>
-        {% if item.pin %}
-          <span class="news-entry__badge">Pinned</span>
-        {% endif %}
-      </div>
-      <div class="news-entry__content">
-        {{ item_content | markdownify }}
-      </div>
-    </article>
-  {% endfor %}
-</div>
+{% include news-stream.html lang="en" limit=10 %}
 
 {% include section.html %}
 

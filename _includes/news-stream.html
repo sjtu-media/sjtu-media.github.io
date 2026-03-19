@@ -1,0 +1,53 @@
+{% assign news_lang = include.lang | default: page.lang | default: "en" %}
+{% assign news_items = site.data.news | sort: "date" | reverse %}
+{% assign page_size = include.page_size | default: 10 %}
+
+{% if include.limit %}
+  {% assign news_items = news_items | slice: 0, include.limit %}
+{% endif %}
+
+{% assign pin_label = "Pinned" %}
+{% assign pager_prev = "Previous" %}
+{% assign pager_next = "Next" %}
+{% if news_lang == "zh" %}
+  {% assign pin_label = "置顶" %}
+  {% assign pager_prev = "上一页" %}
+  {% assign pager_next = "下一页" %}
+{% endif %}
+
+<div
+  class="news-stream"
+  {% if include.paginate %}
+    data-news-pagination
+    data-page-size="{{ page_size }}"
+  {% endif %}
+>
+  {% for item in news_items %}
+    {% assign item_content = item.content[news_lang] | default: item.content %}
+    <article class="news-entry" {% if include.paginate %}data-news-item{% endif %}>
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="{{ item.date | date: '%Y-%m-%d' }}">
+          {% if news_lang == "zh" %}
+            {{ item.date | date: "%Y.%m.%d" }}
+          {% else %}
+            {{ item.date | date: "%b %-d, %Y" }}
+          {% endif %}
+        </time>
+        {% if item.pin %}
+          <span class="news-entry__badge">{{ pin_label }}</span>
+        {% endif %}
+      </div>
+      <div class="news-entry__content">
+        {{ item_content | markdownify }}
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
+{% if include.paginate %}
+  <div class="news-pagination" data-news-pager>
+    <a class="news-pagination__button" href="#" data-news-prev>{{ pager_prev }}</a>
+    <span class="news-pagination__status" data-news-status></span>
+    <a class="news-pagination__button" href="#" data-news-next>{{ pager_next }}</a>
+  </div>
+{% endif %}
