@@ -113,30 +113,6 @@ Research content and featured projects now live under the same top-level section
 {% include section.html %}
 
 <div class="landing-section-head">
-  <p class="landing-kicker">Research</p>
-  <h2>Research Directions</h2>
-  <div>{{ research_intro | markdownify }}</div>
-</div>
-
-<div class="card-grid">
-  {% for project in featured_projects limit: 3 %}
-    <article class="project-card">
-      <p class="news-meta">{{ project.subtitle }}</p>
-      <h3>{{ project.title }}</h3>
-      <div class="project-meta">{{ project.description | markdownify }}</div>
-      <div class="project-tags">
-        {% for tag in project.tags %}
-          <span class="project-tag">{{ tag }}</span>
-        {% endfor %}
-      </div>
-      <a class="project-link" href="{{ '/en/research/' | relative_url }}">See research <span aria-hidden="true">→</span></a>
-    </article>
-  {% endfor %}
-</div>
-
-{% include section.html %}
-
-<div class="landing-section-head">
   <p class="landing-kicker">News</p>
   <h2>Latest Publications</h2>
 </div>
