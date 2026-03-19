@@ -6,9 +6,11 @@ layout: default
 {{ page.excerpt | strip_html | strip_newlines | truncate: 240 }}
 {% endcapture %}
 
+{% assign page_eyebrow = page.eyebrow | default: "News" %}
+
 {% include section.html %}
 
-{% include page-intro.html eyebrow="News" title=page.title summary=summary %}
+{% include page-intro.html eyebrow=page_eyebrow title=page.title summary=summary %}
 
 {%
   include post-info.html
@@ -35,4 +37,4 @@ layout: default
 
 {% include section.html %}
 
-{% include post-nav.html post=page %}
+{% include post-nav.html post=page label=page.nav_label %}
