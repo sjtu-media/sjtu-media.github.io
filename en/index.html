@@ -307,12 +307,6 @@
   
 
   
-
-  
-
-  
-
-  
     
       <link href="/_styles/link.css" rel="stylesheet">
     
@@ -328,6 +322,8 @@
     
       <link href="/_styles/main.css" rel="stylesheet">
     
+  
+
   
 
   
@@ -593,6 +589,10 @@
 
   
 
+  
+
+  
+
 
   <!-- third party scripts -->
 <script src="https://unpkg.com/@popperjs/core@2" defer></script>
@@ -622,6 +622,10 @@
   
 
   
+    <script src="/_scripts/news-pagination.js"></script>
+  
+
+  
     <script src="/_scripts/search.js"></script>
   
 
@@ -635,6 +639,8 @@
 
   
     <script src="/_scripts/tooltip.js"></script>
+  
+
   
 
   
@@ -678,7 +684,6 @@
 
 
 <header class="background" style="--image: url('')" data-dark="true">
-  
   
   
   
@@ -801,8 +806,7 @@
     <h1>SJTU MedIA</h1>
     <div class="landing-lead">
       
-<p>SJTU MedIA is based in the <a href="https://www.cs.sjtu.edu.cn/yjjg/813.html">AGI Institute</a> of the School of Computer Science at Shanghai Jiao Tong University, with research spanning biomedical image analysis, multimodal medical foundation models, and intelligent diagnosis.<br>
-The lab is led by Associate Professor <a href="https://www.cs.sjtu.edu.cn/jiaoshiml/hongyi.html">Yi Hong</a>.</p>
+<p>SJTU MedIA is based in the <a href="https://www.cs.sjtu.edu.cn/yjjg/813.html">AGI Institute</a> of the School of Computer Science at Shanghai Jiao Tong University, with research spanning biomedical image analysis, multimodal medical foundation models, and intelligent diagnosis.</p>
 
     </div>
     <div class="landing-actions">
@@ -851,16 +855,12 @@ The lab is led by Associate Professor <a href="https://www.cs.sjtu.edu.cn/jiaosh
     </div>
     <div class="landing-stats">
       <div class="landing-stat">
-        <span class="landing-stat__value">1</span>
-        <span class="landing-stat__label">People profiles</span>
-      </div>
-      <div class="landing-stat">
-        <span class="landing-stat__value">3</span>
-        <span class="landing-stat__label">News posts</span>
+        <span class="landing-stat__value">2</span>
+        <span class="landing-stat__label">Current members</span>
       </div>
       <div class="landing-stat">
         <span class="landing-stat__value">28</span>
-        <span class="landing-stat__label">Publication records</span>
+        <span class="landing-stat__label">Publication</span>
       </div>
     </div>
   </div>
@@ -907,95 +907,176 @@ The lab is led by Associate Professor <a href="https://www.cs.sjtu.edu.cn/jiaosh
 -->
 
 <div class="landing-section-head">
-  <p class="landing-kicker">Site Sections</p>
-  <h2>Navigate the Lab Website</h2>
-  <div>
-<p>Each major part of the site follows the same visual language so visitors can move between updates, research, publications, people, and contact information without a style break.</p>
-</div>
+  <p class="landing-kicker">News</p>
+  <h2>Lab Updates</h2>
 </div>
 
-<div class="section-card-grid">
-  <article class="section-card">
-    <div class="section-card__icon"><i class="icon fa-regular fa-newspaper"></i></div>
-    <h3>News</h3>
-    <p>Announcements, events, tutorials, recruiting notes, and paper highlights from the group.</p>
-    <a class="section-card__link" href="/en/news/">Open News <span aria-hidden="true">→</span></a>
-  </article>
-  <article class="section-card">
-    <div class="section-card__icon"><i class="icon fa-solid fa-microscope"></i></div>
-    <h3>Research</h3>
-    <p>Research themes, ongoing directions, datasets, software, and featured projects.</p>
-    <a class="section-card__link" href="/en/research/">Open Research <span aria-hidden="true">→</span></a>
-  </article>
-  <article class="section-card">
-    <div class="section-card__icon"><i class="icon fa-solid fa-book-open"></i></div>
-    <h3>Publication</h3>
-    <p>Auto-generated citation records, highlighted papers, and searchable publication listings.</p>
-    <a class="section-card__link" href="/en/publication/">Open Publication <span aria-hidden="true">→</span></a>
-  </article>
-  <article class="section-card">
-    <div class="section-card__icon"><i class="icon fa-solid fa-people-group"></i></div>
-    <h3>People</h3>
-    <p>Faculty, students, staff, and alumni managed from the members collection.</p>
-    <a class="section-card__link" href="/en/people/">Open People <span aria-hidden="true">→</span></a>
-  </article>
-  <article class="section-card">
-    <div class="section-card__icon"><i class="icon fa-regular fa-envelope"></i></div>
-    <h3>Contact</h3>
-    <p>Official contact channels, location details, and information for collaborators.</p>
-    <a class="section-card__link" href="/en/contact/">Open Contact <span aria-hidden="true">→</span></a>
-  </article>
-</div>
-  </section>
-
+<div class="news-stream">
   
-  
-  
+    
+    <article class="news-entry">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-03-18">
+          
+            Mar 18, 2026
+          
+        </time>
+        
+          <span class="news-entry__badge">Pinned</span>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>The lab website completed its first structural refresh, with people, research, and publication pages now aligned under a unified bilingual information architecture.</p>
 
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<div class="landing-section-head">
-  <p class="landing-kicker">Updates</p>
-  <h2>Latest News</h2>
-  <div>
-<p>Recent posts are highlighted prominently, with enough space for one featured update and quick follow-on items.</p>
-</div>
-</div>
-
-<div class="news-layout">
-  
-    <article class="news-feature">
-      <a class="news-feature__image" href="/2023/02/23/example-post-3.html">
-        <img src="/images/photo.jpg" alt="Example post 3">
-      </a>
-      <div class="news-feature__body">
-        <p class="news-meta">Feb 23, 2023</p>
-        <h3><a href="/2023/02/23/example-post-3.html">Example post 3</a></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
     </article>
   
+    
+    <article class="news-entry">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-03-12">
+          
+            Mar 12, 2026
+          
+        </time>
+        
+          <span class="news-entry__badge">Pinned</span>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>We finished restructuring the member database and now maintain bilingual profiles through a single <code class="language-plaintext highlighter-rouge">_members/</code> collection.</p>
 
-  <div class="news-list">
+      </div>
+    </article>
+  
     
-      <article class="news-compact">
-        <p class="news-meta">Sep 30, 2021</p>
-        <h3><a href="/2021/09/30/example-post-2.html">Example post 2</a></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </article>
+    <article class="news-entry">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-03-05">
+          
+            Mar 5, 2026
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>A data-driven news stream has been added to the homepage, and future lab updates can now be maintained directly in <code class="language-plaintext highlighter-rouge">_data/news.yaml</code>.</p>
+
+      </div>
+    </article>
+  
     
-      <article class="news-compact">
-        <p class="news-meta">Jan 7, 2019</p>
-        <h3><a href="/2019/01/07/example-post-1.html">Example post 1</a></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </article>
+    <article class="news-entry">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-02-28">
+          
+            Feb 28, 2026
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>The people page now supports grouped presentation for the principal investigator, PhD students, master’s students, undergraduates, researchers, and historical members.</p>
+
+      </div>
+    </article>
+  
     
-  </div>
+    <article class="news-entry">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-02-21">
+          
+            Feb 21, 2026
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>The publication area has been promoted to a top-level page while keeping its data-driven and searchable presentation.</p>
+
+      </div>
+    </article>
+  
+    
+    <article class="news-entry">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-02-10">
+          
+            Feb 10, 2026
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>The homepage now uses a refreshed visual system including a hero gallery, member statistics, and research direction cards.</p>
+
+      </div>
+    </article>
+  
+    
+    <article class="news-entry">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-02-03">
+          
+            Feb 3, 2026
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>The major modules on the Chinese and English homepages have been aligned to provide a more consistent bilingual browsing experience.</p>
+
+      </div>
+    </article>
+  
+    
+    <article class="news-entry">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-01-27">
+          
+            Jan 27, 2026
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>We updated the people card design to include research directions and external link icons.</p>
+
+      </div>
+    </article>
+  
+    
+    <article class="news-entry">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-01-20">
+          
+            Jan 20, 2026
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>The historical members section now uses the same card size as current members for a cleaner page layout.</p>
+
+      </div>
+    </article>
+  
+    
+    <article class="news-entry">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-01-12">
+          
+            Jan 12, 2026
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>Homepage publication cards now link directly to each paper instead of routing through the publication index.</p>
+
+      </div>
+    </article>
+  
 </div>
   </section>
 
@@ -1063,11 +1144,8 @@ The lab is led by Associate Professor <a href="https://www.cs.sjtu.edu.cn/jiaosh
 -->
 
 <div class="landing-section-head">
-  <p class="landing-kicker">Publication</p>
+  <p class="landing-kicker">News</p>
   <h2>Latest Publications</h2>
-  <div>
-<p>The publication section remains data-driven and searchable, but now sits as its own first-class page in the navigation.</p>
-</div>
 </div>
 
 <div class="card-grid">
@@ -1078,7 +1156,7 @@ The lab is led by Associate Professor <a href="https://www.cs.sjtu.edu.cn/jiaosh
       <p class="news-meta">2026 · IEEE Journal of Biomedical and Health Informatics</p>
       <h3>Enhancing 3D Medical Image Understanding With Pretraining Aided by 2D Multimodal Large Language Models</h3>
       <p class="paper-authors">Qiuhui Chen, Xuancheng Yao, Huping Ye, et al.</p>
-      <a class="paper-link" href="/en/publication/">Browse publications <span aria-hidden="true">→</span></a>
+      <a class="paper-link" href="https://doi.org/hbs2kx">Browse publications <span aria-hidden="true">→</span></a>
     </article>
   
     
@@ -1087,7 +1165,7 @@ The lab is led by Associate Professor <a href="https://www.cs.sjtu.edu.cn/jiaosh
       <p class="news-meta">2026 · IEEE Transactions on Medical Imaging</p>
       <h3>HoloDx: Knowledge- and Data-Driven Multimodal Diagnosis of Alzheimer’s Disease</h3>
       <p class="paper-authors">Qiuhui Chen, Jintao Wang, Gang Wang, et al.</p>
-      <a class="paper-link" href="/en/publication/">Browse publications <span aria-hidden="true">→</span></a>
+      <a class="paper-link" href="https://doi.org/hbs2s8">Browse publications <span aria-hidden="true">→</span></a>
     </article>
   
     
@@ -1096,124 +1174,9 @@ The lab is led by Associate Professor <a href="https://www.cs.sjtu.edu.cn/jiaosh
       <p class="news-meta">2026 · IEEE Transactions on Medical Imaging</p>
       <h3>Harmonizing Generalization and Specialization: Uncertainty-Informed Collaborative Learning for Semi-supervised Medical Image Segmentation</h3>
       <p class="paper-authors">Wenjing Lu, Yi Hong, Yang Yang</p>
-      <a class="paper-link" href="/en/publication/">Browse publications <span aria-hidden="true">→</span></a>
+      <a class="paper-link" href="https://doi.org/hbs2t2">Browse publications <span aria-hidden="true">→</span></a>
     </article>
   
-</div>
-  </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<div class="landing-section-head">
-  <p class="landing-kicker">People</p>
-  <h2>People Snapshot</h2>
-  <div>
-<p>Team members are surfaced directly from the members collection so the homepage stays aligned with the People page.</p>
-</div>
-</div>
-
-<div class="people-preview">
-  
-    
-  
-  
-
-
-
-
-
-
-
-<div class="portrait-wrapper">
-  <a href="/en/people/hongyi/" class="portrait" data-style="" aria-label="HONG Yi">
-    
-      <i class="icon fa-solid fa-microscope"></i>
-    
-
-    <img src="https://www.cs.sjtu.edu.cn/upload/image/jiaoshiml/%E6%B4%AA%E4%B9%89.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        HONG Yi
-      </span>
-    
-
-    
-      <span class="portrait-description">
-        Principal Investigator
-      </span>
-    
-
-    
-      <span class="portrait-affiliation">
-        Shanghai Jiao Tong University School of Computer Science
-      </span>
-    
-  </a>
-</div>
-
-  
-</div>
-  </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<div class="landing-cta">
-  <div>
-    <p class="landing-kicker">Contact</p>
-    <h2>Make it easy to reach the lab</h2>
-    <div>
-<p>The contact section is now one of the five primary site areas. Replace the placeholder details with your official lab email, office location, and collaboration or recruiting information.</p>
-</div>
-  </div>
-  <div class="landing-cta__actions">
-    
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="/en/contact/" data-style="" data-flip="" aria-label="fa-solid fa-arrow-right">
-      <i class="icon fa-solid fa-arrow-right"></i>
-      
-        <span>Open contact page</span>
-      
-    </a>
-  </div>
-
-
-    
-
-
-
-  <div class="button-wrapper">
-    <a class="button" href="/en/people/" data-style="bare" aria-label="button">
-      
-      
-        <span>View people</span>
-      
-    </a>
-  </div>
-
-
-  </div>
 </div>
   </section>
 

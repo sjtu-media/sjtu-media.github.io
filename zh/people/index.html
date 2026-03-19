@@ -307,12 +307,6 @@
   
 
   
-
-  
-
-  
-
-  
     
       <link href="/_styles/link.css" rel="stylesheet">
     
@@ -328,6 +322,8 @@
     
       <link href="/_styles/main.css" rel="stylesheet">
     
+  
+
   
 
   
@@ -593,6 +589,10 @@
 
   
 
+  
+
+  
+
 
   <!-- third party scripts -->
 <script src="https://unpkg.com/@popperjs/core@2" defer></script>
@@ -622,6 +622,10 @@
   
 
   
+    <script src="/_scripts/news-pagination.js"></script>
+  
+
+  
     <script src="/_scripts/search.js"></script>
   
 
@@ -635,6 +639,8 @@
 
   
     <script src="/_scripts/tooltip.js"></script>
+  
+
   
 
   
@@ -678,7 +684,6 @@
 
 
 <header class="background" style="--image: url('')" data-dark="true">
-  
   
   
   
@@ -765,12 +770,6 @@
     
       
     
-      
-    
-      
-    
-      
-    
 
     <a class="lang-switch" href="/en/people/" hreflang="en" lang="en" data-lang-current="zh">
       
@@ -829,13 +828,13 @@
   <h2>课题组负责人</h2>
 </div>
 
-<div class="portrait-wrapper">
-  <a href="/zh/people/hongyi/" class="portrait" data-style="" aria-label="洪义">
+<div class="portrait-wrapper" data-style="">
+  <div class="portrait" aria-label="洪义">
     
       <i class="icon fa-solid fa-microscope"></i>
     
 
-    <img src="https://www.cs.sjtu.edu.cn/upload/image/jiaoshiml/%E6%B4%AA%E4%B9%89.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+    <img src="/images/members/hongyi.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
 
     
       <span class="portrait-name">
@@ -844,17 +843,51 @@
     
 
     
-      <span class="portrait-description">
-        课题组负责人
+
+    
+      <span class="portrait-research">
+        医学图像分析
       </span>
     
 
     
-      <span class="portrait-affiliation">
-        上海交通大学计算机学院
-      </span>
-    
-  </a>
+  </div>
+
+  
+    <div class="portrait-links">
+      
+        
+        
+        
+
+
+
+  <div class="button-wrapper">
+    <a class="button" href="https://www.cs.sjtu.edu.cn/jiaoshiml/hongyi.html" data-tooltip="Home page" data-style="bare" aria-label="Home page">
+      <i class="icon fa-solid fa-house-user"></i>
+      
+    </a>
+  </div>
+
+
+      
+        
+        
+        
+
+
+
+  <div class="button-wrapper">
+    <a class="button" href="https://scholar.google.com/citations?user=16OATcwAAAAJ" data-tooltip="Google Scholar" data-style="bare" aria-label="Google Scholar">
+      <i class="icon fa-brands fa-google"></i>
+      
+    </a>
+  </div>
+
+
+      
+    </div>
+  
 </div>
   </section>
 
@@ -870,12 +903,12 @@
 -->
 
 <div class="page-section-head">
-  <p class="page-section-head__eyebrow">当前成员</p>
-  <h2>学生、职员与研究人员</h2>
+  <p class="page-section-head__eyebrow">成员</p>
+  <h2>硕士研究生</h2>
 </div>
 
-<div class="portrait-wrapper">
-  <a href="/zh/people/dengyushan/" class="portrait" data-style="" aria-label="邓钰山">
+<div class="portrait-wrapper" data-style="">
+  <div class="portrait" aria-label="邓钰山">
     
       <i class="icon fa-solid fa-user-graduate"></i>
     
@@ -889,17 +922,66 @@
     
 
     
-      <span class="portrait-description">
-        硕士研究生
+
+    
+      <span class="portrait-research">
+        扩散模型
       </span>
     
 
     
-      <span class="portrait-affiliation">
-        上海交通大学计算机学院
-      </span>
-    
-  </a>
+  </div>
+
+  
+    <div class="portrait-links">
+      
+        
+        
+        
+
+
+
+  <div class="button-wrapper">
+    <a class="button" href="https://it-billdeng.github.io/" data-tooltip="Home page" data-style="bare" aria-label="Home page">
+      <i class="icon fa-solid fa-house-user"></i>
+      
+    </a>
+  </div>
+
+
+      
+        
+        
+        
+
+
+
+  <div class="button-wrapper">
+    <a class="button" href="https://github.com/IT-BillDeng" data-tooltip="GitHub" data-style="bare" aria-label="GitHub">
+      <i class="icon fa-brands fa-github"></i>
+      
+    </a>
+  </div>
+
+
+      
+        
+        
+        
+
+
+
+  <div class="button-wrapper">
+    <a class="button" href="https://scholar.google.com/citations?user=2aMyI5kAAAAJ" data-tooltip="Google Scholar" data-style="bare" aria-label="Google Scholar">
+      <i class="icon fa-brands fa-google"></i>
+      
+    </a>
+  </div>
+
+
+      
+    </div>
+  
 </div>
   </section>
 
@@ -915,25 +997,39 @@
 -->
 
 <div class="page-section-head">
-  <p class="page-section-head__eyebrow">校友</p>
-  <h2>历届成员</h2>
+  <h2>历史成员</h2>
 </div>
-  </section>
+
+<div class="portrait-wrapper" data-style="">
+  <div class="portrait" aria-label="陈秋慧">
+    
+      <i class="icon fa-solid fa-graduation-cap"></i>
+    
+
+    <img src="" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
+
+    
+      <span class="portrait-name">
+        陈秋慧
+      </span>
+    
+
+    
+      <span class="portrait-description">
+        博士研究生
+      </span>
+    
+
+    
+
+    
+      <span class="portrait-affiliation">
+        华东理工大学
+      </span>
+    
+  </div>
 
   
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<div class="page-panel">
-  <h2>招生与团队文化</h2>
-  <p>这里可以写团队文化、指导方式、开放岗位或合作重点的简短说明。</p>
 </div>
   </section>
 

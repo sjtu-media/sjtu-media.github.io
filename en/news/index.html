@@ -307,12 +307,6 @@
   
 
   
-
-  
-
-  
-
-  
     
       <link href="/_styles/link.css" rel="stylesheet">
     
@@ -328,6 +322,8 @@
     
       <link href="/_styles/main.css" rel="stylesheet">
     
+  
+
   
 
   
@@ -593,6 +589,10 @@
 
   
 
+  
+
+  
+
 
   <!-- third party scripts -->
 <script src="https://unpkg.com/@popperjs/core@2" defer></script>
@@ -622,6 +622,10 @@
   
 
   
+    <script src="/_scripts/news-pagination.js"></script>
+  
+
+  
     <script src="/_scripts/search.js"></script>
   
 
@@ -635,6 +639,8 @@
 
   
     <script src="/_scripts/tooltip.js"></script>
+  
+
   
 
   
@@ -678,7 +684,6 @@
 
 
 <header class="background" style="--image: url('')" data-dark="true">
-  
   
   
   
@@ -798,7 +803,7 @@
   
     <div class="page-intro__summary">
       
-<p>News, announcements, recruiting notes, tutorials, and paper highlights from the lab.</p>
+<p>Lab updates, announcements, milestones, and notices maintained.</p>
 
     </div>
   
@@ -818,275 +823,211 @@
   <size></size>
 -->
 
-<div class="page-toolbar">
-  <h2>Browse Posts</h2>
-  <p class="page-note">Search the archive or filter by tags. Replace the sample posts in `_posts/` with your own news items when ready.</p>
-  <div class="search-box">
-  <input type="text" class="search-input" oninput="onSearchInput(this)" placeholder="Search items on this page">
-  <button disabled data-tooltip="Clear search" aria-label="clear search" onclick="onSearchClear()">
-    <i class="icon fa-solid fa-magnifying-glass"></i>
-  </button>
+<div class="news-stream" data-news-pagination="" data-page-size="10">
+  
+    
+    <article class="news-entry" data-news-item="">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-03-18">
+          
+            Mar 18, 2026
+          
+        </time>
+        
+          <span class="news-entry__badge">Pinned</span>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>The lab website completed its first structural refresh, with people, research, and publication pages now aligned under a unified bilingual information architecture.</p>
+
+      </div>
+    </article>
+  
+    
+    <article class="news-entry" data-news-item="">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-03-12">
+          
+            Mar 12, 2026
+          
+        </time>
+        
+          <span class="news-entry__badge">Pinned</span>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>We finished restructuring the member database and now maintain bilingual profiles through a single <code class="language-plaintext highlighter-rouge">_members/</code> collection.</p>
+
+      </div>
+    </article>
+  
+    
+    <article class="news-entry" data-news-item="">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-03-05">
+          
+            Mar 5, 2026
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>A data-driven news stream has been added to the homepage, and future lab updates can now be maintained directly in <code class="language-plaintext highlighter-rouge">_data/news.yaml</code>.</p>
+
+      </div>
+    </article>
+  
+    
+    <article class="news-entry" data-news-item="">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-02-28">
+          
+            Feb 28, 2026
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>The people page now supports grouped presentation for the principal investigator, PhD students, master’s students, undergraduates, researchers, and historical members.</p>
+
+      </div>
+    </article>
+  
+    
+    <article class="news-entry" data-news-item="">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-02-21">
+          
+            Feb 21, 2026
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>The publication area has been promoted to a top-level page while keeping its data-driven and searchable presentation.</p>
+
+      </div>
+    </article>
+  
+    
+    <article class="news-entry" data-news-item="">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-02-10">
+          
+            Feb 10, 2026
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>The homepage now uses a refreshed visual system including a hero gallery, member statistics, and research direction cards.</p>
+
+      </div>
+    </article>
+  
+    
+    <article class="news-entry" data-news-item="">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-02-03">
+          
+            Feb 3, 2026
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>The major modules on the Chinese and English homepages have been aligned to provide a more consistent bilingual browsing experience.</p>
+
+      </div>
+    </article>
+  
+    
+    <article class="news-entry" data-news-item="">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-01-27">
+          
+            Jan 27, 2026
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>We updated the people card design to include research directions and external link icons.</p>
+
+      </div>
+    </article>
+  
+    
+    <article class="news-entry" data-news-item="">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-01-20">
+          
+            Jan 20, 2026
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>The historical members section now uses the same card size as current members for a cleaner page layout.</p>
+
+      </div>
+    </article>
+  
+    
+    <article class="news-entry" data-news-item="">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-01-12">
+          
+            Jan 12, 2026
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>Homepage publication cards now link directly to each paper instead of routing through the publication index.</p>
+
+      </div>
+    </article>
+  
+    
+    <article class="news-entry" data-news-item="">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2026-01-05">
+          
+            Jan 5, 2026
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>A dedicated news dataset has been added to the site data layer to provide a single maintenance entry point for future updates.</p>
+
+      </div>
+    </article>
+  
+    
+    <article class="news-entry" data-news-item="">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="2025-12-22">
+          
+            Dec 22, 2025
+          
+        </time>
+        
+      </div>
+      <div class="news-entry__content">
+        <p>The research and publication sections have been reorganized on the homepage for a tighter and clearer content hierarchy.</p>
+
+      </div>
+    </article>
+  
 </div>
 
-  
-
-
-  <div class="tags">
-    
-      <a href="/en/news/?search=%22tag:%20biology%22" class="tag" data-tooltip='Show items with the tag "biology"'>
-        biology
-      </a>
-    
-      <a href="/en/news/?search=%22tag:%20medicine%22" class="tag" data-tooltip='Show items with the tag "medicine"'>
-        medicine
-      </a>
-    
-      <a href="/en/news/?search=%22tag:%20big-data%22" class="tag" data-tooltip='Show items with the tag "big-data"'>
-        big-data
-      </a>
-    
+<div class="news-pagination" data-news-pager="">
+    <a class="news-pagination__button" href="#" data-news-prev="">Previous</a>
+    <span class="news-pagination__status" data-news-status=""></span>
+    <a class="news-pagination__button" href="#" data-news-next="">Next</a>
   </div>
-
-
-  <div class="search-info"></div>
-
-</div>
-  </section>
-
-  
-  
-  
-
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h3 id="2023">2023</h3>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt">
-    
-    
-    
-
-    
-      <a href="/2023/02/23/example-post-3.html" class="post-excerpt-image" aria-label="Example post 3">
-        <img src="/images/photo.jpg" alt="Example post 3" loading="lazy" onerror="this.src = '/images/fallback.svg'; this.onerror = null;">
-      </a>
-    
-
-    <div class="post-excerpt-text">
-      <a href="/2023/02/23/example-post-3.html">Example post 3</a>
-
-      <div class="post-info">
-  
-    
-    
-      
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>john-doe</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>February 23, 2023</span>
-    </span>
-  
-
-  
-    <span data-tooltip="Last updated on">
-      <i class="icon fa-solid fa-clock-rotate-left"></i>
-      <span>March 19, 2026</span>
-    </span>
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href="/news?search=%22tag:%20biology%22" class="tag" data-tooltip='Show items with the tag "biology"'>
-        biology
-      </a>
-    
-      <a href="/news?search=%22tag:%20medicine%22" class="tag" data-tooltip='Show items with the tag "medicine"'>
-        medicine
-      </a>
-    
-  </div>
-
-
-
-
-
-      
-      
-      <p data-search="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-      </p>
-    </div>
-  </div>
-</div>
-
-<h3 id="2021">2021</h3>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt">
-    
-    
-    
-
-    
-
-    <div class="post-excerpt-text">
-      <a href="/2021/09/30/example-post-2.html">Example post 2</a>
-
-      <div class="post-info">
-  
-    
-    
-      
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>jane-smith</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>September 30, 2021</span>
-    </span>
-  
-
-  
-    <span data-tooltip="Last updated on">
-      <i class="icon fa-solid fa-clock-rotate-left"></i>
-      <span>March 19, 2026</span>
-    </span>
-  
-</div>
-
-
-  
-
-
-
-
-
-
-      
-      
-      <p data-search="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-      </p>
-    </div>
-  </div>
-</div>
-
-<h3 id="2019">2019</h3>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt">
-    
-    
-    
-
-    
-
-    <div class="post-excerpt-text">
-      <a href="/2019/01/07/example-post-1.html">Example post 1</a>
-
-      <div class="post-info">
-  
-    
-    
-      
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>sarah-johnson</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>January 07, 2019</span>
-    </span>
-  
-
-  
-    <span data-tooltip="Last updated on">
-      <i class="icon fa-solid fa-clock-rotate-left"></i>
-      <span>March 19, 2026</span>
-    </span>
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href="/news?search=%22tag:%20biology%22" class="tag" data-tooltip='Show items with the tag "biology"'>
-        biology
-      </a>
-    
-      <a href="/news?search=%22tag:%20medicine%22" class="tag" data-tooltip='Show items with the tag "medicine"'>
-        medicine
-      </a>
-    
-      <a href="/news?search=%22tag:%20big-data%22" class="tag" data-tooltip='Show items with the tag "big-data"'>
-        big-data
-      </a>
-    
-  </div>
-
-
-
-
-
-      
-      
-      <p data-search="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-      </p>
-    </div>
-  </div>
-</div>
   </section>
 
 
