@@ -8,6 +8,7 @@ permalink: /zh/
 {% include section.html size="wide" %}
 
 {% assign featured_projects = site.data.projects | where: "group", "featured" %}
+{% assign homepage_news = site.data.news | sort: "date" | reverse | slice: 0, 10 %}
 {% assign recent_publications = site.data.citations | sort: "date" | reverse | slice: 0, 3 %}
 {% assign current_members = site.members | where_exp: "member", "member.group != 'alum'" %}
 {% assign preview_members = current_members | sort: "slug" | slice: 0, 4 %}
@@ -119,6 +120,33 @@ Contact 现已成为五个一级栏目之一。请将占位内容替换为正式
 {% include section.html %}
 
 <div class="landing-section-head">
+  <p class="landing-kicker">动态</p>
+  <h2>实验室新闻</h2>
+</div>
+
+<div class="news-stream">
+  {% for item in homepage_news %}
+    {% assign item_content = item.content.zh | default: item.content %}
+    <article class="news-entry">
+      <div class="news-entry__meta">
+        <time class="news-entry__date" datetime="{{ item.date | date: '%Y-%m-%d' }}">
+          {{ item.date | date: "%Y.%m.%d" }}
+        </time>
+        {% if item.pin %}
+          <span class="news-entry__badge">置顶</span>
+        {% endif %}
+      </div>
+      <div class="news-entry__content">
+        {{ item_content | markdownify }}
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
+{% include section.html %}
+
+<div class="landing-section-head">
+  <p class="landing-kicker">动态</p>
   <h2>最新论文</h2>
 </div>
 
