@@ -37,14 +37,6 @@
     | where: "lang", alt_lang
     | first
   %}
-  {% if alt_page == nil %}
-    {% assign member_docs = site.members_zh | concat: site.members_en %}
-    {% assign alt_page = member_docs
-      | where: "lang_ref", page.lang_ref
-      | where: "lang", alt_lang
-      | first
-    %}
-  {% endif %}
   {% assign alt_url = "/" | append: alt_lang | append: "/" %}
   {% if alt_page %}
     {% assign alt_url = alt_page.url %}

@@ -33,17 +33,16 @@ layout: default
       role=page.role
       description=page.description
       affiliation=page.affiliation
+      group=page.group
+      lang=page.lang
       links=page.links
+      research=page.research
+      research_interest=page.research_interest
+      research_interests=page.research_interests
       slug=page.slug
       url=page.url
+      direction=page.direction
     %}
-    <div class="page-profile__links">
-      {% for link in page.links %}
-        {% assign key = link[0] %}
-        {% assign value = link[1] %}
-        {% include button.html type=key link=value style="bare" %}
-      {% endfor %}
-    </div>
   </aside>
   <div class="page-panel page-richtext">
     {{ content }}

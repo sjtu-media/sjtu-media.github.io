@@ -18,15 +18,15 @@
 {% elsif member_lang == "en" %}
   {% assign role_description = type.description_en | default: type.description %}
 {% endif %}
+{% assign member_name = member.name[member_lang] | default: member.name %}
+{% assign member_description = member.description[member_lang] | default: member.description %}
+{% assign research_focus = member.research[member_lang] | default: member.research | default: member.research_interest | default: member.research_interests | default: member.direction %}
+{% assign member_affiliation = member.affiliation[member_lang] | default: member.affiliation %}
 
-<div class="portrait-wrapper">
-  <a
-    {% if page.slug != member.slug %}
-      href="{{ member.url | relative_url | uri_escape }}"
-    {% endif %}
+<div class="portrait-wrapper" data-style="{{ include.style }}">
+  <div
     class="portrait"
-    data-style="{{ include.style }}"
-    aria-label="{{ member.name | default: "member link" | regex_strip }}"
+    aria-label="{{ member_name | default: "member" | regex_strip }}"
   >
     {% if type %}
       {% include icon.html icon=type.icon %}
@@ -40,22 +40,38 @@
       {% include fallback.html %}
     >
 
-    {% if member.name %}
+    {% if member_name %}
       <span class="portrait-name">
-        {{ member.name }}
+        {{ member_name }}
       </span>
     {% endif %}
 
-    {% if member.description or type %}
+    {% if member_description or (member.group == "alum" and type) %}
       <span class="portrait-description">
-        {{ member.description | default: role_description }}
+        {{ member_description | default: role_description }}
       </span>
     {% endif %}
 
-    {% if member.affiliation %}
-      <span class="portrait-affiliation">
-        {{ member.affiliation }}
+    {% if research_focus %}
+      <span class="portrait-research">
+        {{ research_focus }}
       </span>
     {% endif %}
-  </a>
+
+    {% if member.group == "alum" and member_affiliation %}
+      <span class="portrait-affiliation">
+        {{ member_affiliation }}
+      </span>
+    {% endif %}
+  </div>
+
+  {% if member.links %}
+    <div class="portrait-links">
+      {% for link in member.links %}
+        {% assign key = link[0] %}
+        {% assign value = link[1] %}
+        {% include button.html type=key link=value text="" style="bare" %}
+      {% endfor %}
+    </div>
+  {% endif %}
 </div>
