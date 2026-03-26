@@ -23,22 +23,6 @@ permalink: /zh/
 上海交通大学 MedIA 实验室，从属于上海交通大学计算机学院[通用人工智能研究所](https://www.cs.sjtu.edu.cn/yjjg/813.html)（AGI Institute），致力于生物医学图像处理、多模态医学基础模型与智能诊断。  
 {% endcapture %}
 
-{% capture sections_intro %}
-各个一级页面保持统一的视觉语言，访问者可以自然地在动态、研究、论文、团队与联系信息之间切换。
-{% endcapture %}
-
-{% capture research_intro %}
-研究内容与重点项目现在统一归入顶层 Research 页面，而不再单独拆出 Projects 栏。
-{% endcapture %}
-
-{% capture people_intro %}
-首页的成员预览与人数统计只包含当前成员，因此会与 People 页面中的“当前成员”分组保持一致。
-{% endcapture %}
-
-{% capture contact_intro %}
-Contact 现已成为五个一级栏目之一。请将占位内容替换为正式邮箱、办公地点以及合作或招生信息。
-{% endcapture %}
-
 <div class="landing-hero">
   <div class="landing-hero__copy">
     <h1>{{ site.title }}</h1>
