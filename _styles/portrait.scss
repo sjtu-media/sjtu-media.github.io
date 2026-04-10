@@ -6,7 +6,7 @@
   display: inline-flex;
   flex-direction: column;
   margin: 20px;
-  width: 210px;
+  width: 300px;
   max-width: calc(100% - 20px - 20px);
   padding: 20px;
   border: 1px solid rgba(15, 110, 168, 0.08);
@@ -26,7 +26,7 @@
 }
 
 .portrait-wrapper[data-style="small"] {
-  width: 150px;
+  width: 200px;
 }
 
 .portrait-wrapper[data-style="tiny"] {

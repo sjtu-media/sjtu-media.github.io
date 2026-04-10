@@ -99,8 +99,8 @@ permalink: /zh/
 {% include section.html %}
 
 <div class="landing-section-head">
-  <p class="landing-kicker">动态</p>
-  <h2>实验室新闻</h2>
+  <!-- <p class="landing-kicker">动态</p> -->
+  <h2>最新动态</h2>
 </div>
 
 {% include news-stream.html lang="zh" limit=10 %}
@@ -108,7 +108,7 @@ permalink: /zh/
 {% include section.html %}
 
 <div class="landing-section-head">
-  <p class="landing-kicker">动态</p>
+  <!-- <p class="landing-kicker">动态</p> -->
   <h2>最新论文</h2>
 </div>
 

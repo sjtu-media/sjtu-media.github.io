@@ -2,7 +2,7 @@
 name:
   zh: 胡馨月
   en: Xinyue Hu
-image: 
+image: images/members/huxinyue.jpg
 role: phd
 group: member
 research:
@@ -16,12 +16,12 @@ aliases:
   - XY H
 links:
   home-page: 
-  github: 
-  google-scholar: 
-  linkedin: 
-  twitter: 
-  instagram: 
-  facebook: 
+#   github: 
+#   google-scholar: 
+#   linkedin: 
+#   twitter: 
+#   instagram: 
+#   facebook: 
 bio:
   zh: 
   en: 

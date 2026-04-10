@@ -1,11 +1,11 @@
 ---
-title: News
+title: Lab Updates
 lang: en
-lang_ref: news
+lang_ref: Lab Updates
 permalink: /en/news/
-nav:
-  order: 1
-  tooltip: Updates, announcements, and highlights
+nav: false #不需要专栏
+  # order: 1
+  # tooltip: Updates, announcements, and highlights
 ---
 
 {% capture summary %}

@@ -6,8 +6,8 @@ zh:
       zh: 中文
       en: EN
   nav:
-    news:
-      label: 新闻
+    news: #不需要设立专栏
+      label: 最新动态
       tooltip: 动态、公告与亮点
     research:
       label: 研究
@@ -30,8 +30,8 @@ en:
       zh: ZH
       en: English
   nav:
-    news:
-      label: News
+    news: #不需要设立专栏
+      label: Lab Updates
       tooltip: Updates, announcements, and highlights
     research:
       label: Research

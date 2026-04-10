@@ -8,13 +8,13 @@
     <p class="page-intro__eyebrow">{{ intro_eyebrow }}</p>
   {% endif %}
 
-  <h1 class="page-intro__title">{{ intro_title }}</h1>
+  <!-- <h1 class="page-intro__title">{{ intro_title }}</h1> 不显示页面标题 -->
 
-  {% if include.summary %}
+  <!-- {% if include.summary %}
     <div class="page-intro__summary">
       {{ include.summary | markdownify }}
     </div>
-  {% endif %}
+  {% endif %} -->
 
   {% if include.actions %}
     <div class="page-intro__actions">

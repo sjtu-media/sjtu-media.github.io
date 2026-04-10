@@ -1,17 +1,17 @@
-- date: 2026-03-26
+- date: 2026-04-09
   pin: false
   content:
-    zh: 今天是个好日子。
-    en: Today is a brand new day.
+    zh: 添加实验室成员，修改新闻为最新动态，取消新闻顶部专栏，论文取消‘代表性论文显示’。
+    en: Add lab members, change "News" to "Latest Updates", remove the top news column, and disable the "Representative Papers" display in the Publications section.
 
 - date: 2026-03-18
-  pin: true
+  pin: false
   content:
     zh: 实验室官网完成第一轮结构升级，团队、研究和论文页面已统一到新的双语信息架构。
     en: The lab website completed its first structural refresh, with people, research, and publication pages now aligned under a unified bilingual information architecture.
 
 - date: 2026-03-12
-  pin: true
+  pin: false
   content:
     zh: 我们完成了成员数据库重构，现已使用单一 `_members/` collection 维护中英文信息。
     en: We finished restructuring the member database and now maintain bilingual profiles through a single `_members/` collection.
