@@ -2,7 +2,7 @@
 name:
   zh: 邓钰山
   en: Yushan DENG
-image: https://it-billdeng.github.io/images/Onimai_comic_clean_square.png
+image: images/members/dengyushan.jpg
 role: master
 research:
   zh: 扩散模型
