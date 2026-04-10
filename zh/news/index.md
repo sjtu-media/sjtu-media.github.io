@@ -1,11 +1,11 @@
 ---
-title: 新闻
+title: 最新动态
 lang: zh
-lang_ref: news
+lang_ref: Lab Updates
 permalink: /zh/news/
-nav:
-  order: 1
-  tooltip: Updates, announcements, and highlights
+nav: false #不需要news专栏
+  # order: 1
+  # tooltip: Updates, announcements, and highlights
 ---
 
 {% capture summary %}

@@ -53,9 +53,9 @@
     {% endif %}
 
     {% if research_focus %}
-      <span class="portrait-research">
+      <div class="portrait-research" data-full="{{ research_focus }}">
         {{ research_focus }}
-      </span>
+      </div>
     {% endif %}
 
     {% if member.group == "alum" and member_affiliation %}
